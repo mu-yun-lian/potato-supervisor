@@ -1,0 +1,2 @@
+Production sources, resources, assets, tests and build configuration match the independently extracted clean build: 38 files.
+Reports and verification evidence were added after that build.

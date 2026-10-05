@@ -1,0 +1,1984 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "entry_gentle_001",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "先想想你写下的任务：{task}。要现在回去继续吗？"
+    },
+    {
+      "id": "entry_gentle_002",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "如果需要资料，可以暂时使用；我们会按约定再提醒你。"
+    },
+    {
+      "id": "entry_gentle_003",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "目标是{goal}。先做一个小步骤，也算开始。"
+    },
+    {
+      "id": "reentry_gentle_001",
+      "scene": "reentry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "上次还剩{remainingDuration}，继续不会获得新的时间额度。"
+    },
+    {
+      "id": "reentry_gentle_002",
+      "scene": "reentry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "你又回来了。先选择继续余额，或回到学习任务。"
+    },
+    {
+      "id": "accept_study_gentle_001",
+      "scene": "accept_study",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "好的，先给你{grantDuration}搜资料。用完我们再确认下一步。"
+    },
+    {
+      "id": "accept_rest_gentle_001",
+      "scene": "accept_rest",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "好的，休息{grantDuration}。稍后记得回到{task}。"
+    },
+    {
+      "id": "followup_study_gentle_001",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "刚才说来搜资料，这段时间用完了。要回到{task}吗？"
+    },
+    {
+      "id": "followup_study_gentle_002",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "资料够用了吗？可以先回任务试着做一步。"
+    },
+    {
+      "id": "followup_study_gentle_003",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "你选择的搜资料时间已经用完，现在决定下一步。"
+    },
+    {
+      "id": "followup_rest_gentle_001",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "休息这段时间用完了，要回到本次任务吗？"
+    },
+    {
+      "id": "followup_rest_gentle_002",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "可以把下一步缩小一点，先完成{task}的一小部分。"
+    },
+    {
+      "id": "followup_rest_gentle_003",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "休息时间到。你可以现在回任务，也可以按剩余约定续时。"
+    },
+    {
+      "id": "repeat_extension_gentle_001",
+      "scene": "repeat_extension",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "这是第{grantCount}次放行，请想一想下一步怎么回任务。"
+    },
+    {
+      "id": "last_grant_gentle_001",
+      "scene": "last_grant",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "这是本轮最后一段。用完会按你选择的模式处理。"
+    },
+    {
+      "id": "cooldown_gentle_001",
+      "scene": "cooldown",
+      "tone": "gentle",
+      "expression": "cooldown",
+      "text": "本轮约定已经结束，先回到{task}，冷却后再决定。"
+    },
+    {
+      "id": "cooldown_gentle_002",
+      "scene": "cooldown",
+      "tone": "gentle",
+      "expression": "cooldown",
+      "text": "冷却期间，其他学习工具仍然可以使用。"
+    },
+    {
+      "id": "over_limit_gentle_001",
+      "scene": "over_limit",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "本轮约定已经用完。你选择只提醒，可以继续，也可以回到任务。"
+    },
+    {
+      "id": "over_limit_gentle_002",
+      "scene": "over_limit",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "如果继续，我们会在下一段使用时间结束后再提醒。"
+    },
+    {
+      "id": "return_to_task_gentle_001",
+      "scene": "return_to_task",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "回去先做一个小步骤，不必一次解决全部。"
+    },
+    {
+      "id": "past_self_gentle_001",
+      "scene": "past_self",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "你之前写下的话：{task}"
+    },
+    {
+      "id": "entry_snark_001",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "任务写得挺认真，打开这个也挺熟练。先回去。任务是：{task}。"
+    },
+    {
+      "id": "entry_snark_002",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "你写了{goal}，然后就来这儿了。计划是写给谁看的？"
+    },
+    {
+      "id": "entry_snark_003",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "你写下的任务是：{task}。每次都从“玩一会儿”开始，今天还来？"
+    },
+    {
+      "id": "entry_snark_004",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "你自己定的学习时段。刚打开这个，还要我提醒？"
+    },
+    {
+      "id": "entry_roast_001",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "目标是你自己写的。现在又打开这个，你是在糊弄谁？"
+    },
+    {
+      "id": "entry_roast_002",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "你就玩吧。{task}不会因为你装没看见就消失。"
+    },
+    {
+      "id": "entry_roast_003",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "学习总想往后拖，玩起来一点不耽误。你可真会挑。"
+    },
+    {
+      "id": "entry_roast_004",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "又来了。非得让一个土豆盯着，你才肯去学？"
+    },
+    {
+      "id": "reentry_snark_001",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "又打开了。还剩{remainingDuration}，换个入口也不会多出时间。"
+    },
+    {
+      "id": "reentry_snark_002",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "刚切走就又回来。你这是放不下手机，还是放不下借口？"
+    },
+    {
+      "id": "reentry_snark_003",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "别试了，剩余还是{remainingDuration}。"
+    },
+    {
+      "id": "reentry_roast_001",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "又回来试什么？还剩{remainingDuration}，别把自己那点小心思当聪明。"
+    },
+    {
+      "id": "reentry_roast_002",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "进进出出挺忙的。折腾半天，{task}还等着你。"
+    },
+    {
+      "id": "reentry_roast_003",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "还剩{remainingDuration}，不会重新发放。别一进来就急着给自己加时间。"
+    },
+    {
+      "id": "accept_study_snark_001",
+      "scene": "accept_study",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "行，{grantDuration}。资料找到就回去用，别一直待在这儿。"
+    },
+    {
+      "id": "accept_study_roast_001",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "先信你是来找资料的。{grantDuration}，到点别又赖着。"
+    },
+    {
+      "id": "accept_rest_snark_001",
+      "scene": "accept_rest",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "给你{grantDuration}。说好到点就停，这次记住。"
+    },
+    {
+      "id": "accept_rest_roast_001",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "行，休息{grantDuration}。到点就滚回到任务：{task}，别又反悔。"
+    },
+    {
+      "id": "followup_study_snark_001",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "找资料的时间到了。回到任务：{task}，还是准备再换个理由？"
+    },
+    {
+      "id": "followup_study_snark_002",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "刚才说找资料。现在到点了，说好的事还算数吗？"
+    },
+    {
+      "id": "followup_study_snark_003",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "资料找到就去用。一直留在这儿，题也不会自己做。"
+    },
+    {
+      "id": "followup_study_snark_004",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "到点了。别把“找资料”变成一直不开始的理由。"
+    },
+    {
+      "id": "followup_study_roast_001",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "查资料到点了。把资料拿回任务里用，别一直耗在这里。"
+    },
+    {
+      "id": "followup_study_roast_002",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "刚才说来学习，现在到点还不走。你打算让这个借口撑多久？"
+    },
+    {
+      "id": "followup_study_roast_003",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你自己选的时长，用完又不肯走。说过的话就这么不值钱？"
+    },
+    {
+      "id": "followup_study_roast_004",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别把“我在学习”挂嘴上。回到任务：{task}，动手才算。"
+    },
+    {
+      "id": "followup_rest_snark_001",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "说好到点就停。时间到了，怎么又不算数了？"
+    },
+    {
+      "id": "followup_rest_snark_002",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "又是再玩一会儿。你自己还信这句话吗？"
+    },
+    {
+      "id": "followup_rest_snark_003",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "休息结束了。回到任务：{task}，别又拖到明天。"
+    },
+    {
+      "id": "followup_rest_snark_004",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "这一段用完了。你要的是休息，还是一直逃开任务？"
+    },
+    {
+      "id": "followup_rest_roast_001",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "又是再玩一会儿。你对自己说的话，怎么跟放屁一样？"
+    },
+    {
+      "id": "followup_rest_roast_002",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "到点还赖着。你连自己定的这点规矩都守不住？"
+    },
+    {
+      "id": "followup_rest_roast_003",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别再拿休息当借口了。手机放下，去完成你写下的任务：{task}。"
+    },
+    {
+      "id": "followup_rest_roast_004",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你就继续耗。最后着急补任务的人还是你自己。"
+    },
+    {
+      "id": "followup_rest_roast_005",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "说好只玩这一段，现在又想续。你到底打算骗自己几次？"
+    },
+    {
+      "id": "repeat_extension_snark_001",
+      "scene": "repeat_extension",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "第{grantCount}次了。还有多少个“再玩一会儿”？"
+    },
+    {
+      "id": "repeat_extension_roast_001",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "第{grantCount}次了。够了没？你说的话还能算几句？"
+    },
+    {
+      "id": "last_grant_snark_001",
+      "scene": "last_grant",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "最后一段。到点就回去，别再跟自己讨价还价。"
+    },
+    {
+      "id": "last_grant_roast_001",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "最后一段。用完就回去，别到时候又耍赖。"
+    },
+    {
+      "id": "cooldown_snark_001",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "cooldown",
+      "text": "次数用完了。回到任务：{task}，今天别再欠账。"
+    },
+    {
+      "id": "cooldown_snark_002",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "cooldown",
+      "text": "已经给过你时间了。现在回桌面，按说好的办。"
+    },
+    {
+      "id": "cooldown_snark_003",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "cooldown",
+      "text": "这轮结束。别再绕了，任务还在等你。"
+    },
+    {
+      "id": "cooldown_roast_001",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "cooldown",
+      "text": "给过时间，也提醒过了，还要赖着？行，回桌面。"
+    },
+    {
+      "id": "cooldown_roast_002",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "cooldown",
+      "text": "够了。一次次给你时间，一次次不肯停。现在去完成你写下的任务：{task}。"
+    },
+    {
+      "id": "cooldown_roast_003",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "cooldown",
+      "text": "说好到点就停，你非得让土豆替你按。自己不觉得丢人？"
+    },
+    {
+      "id": "cooldown_roast_004",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "cooldown",
+      "text": "这轮用完了。别再讨价还价，手机放下，去学。"
+    },
+    {
+      "id": "over_limit_snark_001",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "约定用完了。你选了只提醒，接下来停不停由你决定。"
+    },
+    {
+      "id": "over_limit_snark_002",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "还想继续？行。别再说今天没时间做{task}。"
+    },
+    {
+      "id": "over_limit_snark_003",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "已经超过这轮约定了。每点一次继续，都在占用你本来安排的时间。"
+    },
+    {
+      "id": "over_limit_roast_001",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "约定都用完了，还点继续。你是打算把今天全耗在这儿？"
+    },
+    {
+      "id": "over_limit_roast_002",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你选了只提醒，没人替你停。别耗完了又怪自己没时间。"
+    },
+    {
+      "id": "over_limit_roast_003",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "继续吧。任务拖着不做，最后还得你自己受着。"
+    },
+    {
+      "id": "return_to_task_snark_001",
+      "scene": "return_to_task",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "回去就做{task}。别放下手机又发呆。"
+    },
+    {
+      "id": "return_to_task_roast_001",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "回去就开工。别光嘴上答应得好听。"
+    },
+    {
+      "id": "past_self_snark_001",
+      "scene": "past_self",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "这是你自己写的：{task}。别装没看见。"
+    },
+    {
+      "id": "past_self_roast_001",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "{task}。是你自己写的，别转头就当放了个屁。"
+    },
+    {
+      "id": "entry_gentle_101",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "先停一下，想好这次打开应用要做什么。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_gentle_102",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "你给自己留了一个任务：{task}。现在开始也来得及。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_gentle_103",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "需要休息可以按约定来，别让一小段变成一整场。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_gentle_104",
+      "scene": "entry",
+      "tone": "gentle",
+      "expression": "idle",
+      "text": "先决定查资料还是休息，我们会到时再提醒。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_snark_101",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "计划写得挺认真，执行到打开娱乐应用这一步了？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_snark_102",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "你装了监督员，又来跟监督员商量怎么不学。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_snark_103",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "想要{goal}，这次打开手机是在往哪边走？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_snark_104",
+      "scene": "entry",
+      "tone": "snark",
+      "expression": "idle",
+      "text": "先别急着解释。你写的任务和现在做的事，能对得上吗？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_101",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "又想玩？你嘴上想要{goal}，手上选的倒是痛快。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_102",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "别急着找理由。你最会的那套，就是给自己放水。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_103",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "非得等到时间耗光了，再来表演后悔？现在就去做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_104",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "你装这个应用，是让它看你耍赖，还是让它拦住你？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_105",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "想清醒就别光找人骂。手机放下，翻开任务，动手。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_106",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "你就玩吧。计划写得再漂亮，也不会自己变成结果。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_107",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "别又把“等会儿”当救命符。等会儿的你比现在多长一双手？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "entry_roast_108",
+      "scene": "entry",
+      "tone": "roast",
+      "expression": "idle",
+      "text": "目标是你自己选的，又没人押着你写。现在跟谁装糊涂？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_gentle_101",
+      "scene": "reentry",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "回来后继续用上次余额，不重新发放时间。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_gentle_102",
+      "scene": "reentry",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "如果资料已经找好，现在可以回去使用它。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_gentle_103",
+      "scene": "reentry",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "你还剩{remainingDuration}，按需要使用就好。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_gentle_104",
+      "scene": "reentry",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这次回来不会多领一段，可以直接回到任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_snark_101",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "又打开了。余额不会因为手滑就重置。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_snark_102",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "进进出出挺勤快，次数不会跟着失忆。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_snark_103",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "刚离开又回来。你是回来做什么的？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_snark_104",
+      "scene": "reentry",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "换入口也没用，时间还是同一份。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_roast_101",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "又回来了？刚才说要停，转头就算放屁了？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_roast_102",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别试了。换个入口也不会给你变出时间。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_roast_103",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "还剩{remainingDuration}。别把退出再进当什么聪明办法。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_roast_104",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "打开、关掉、再打开。你到底想省时间，还是想耗时间？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_roast_105",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "有这折腾的劲，先去碰一下你写的任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "reentry_roast_106",
+      "scene": "reentry",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "我记着呢。你没忘约定，只是不想照做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_gentle_101",
+      "scene": "accept_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "给你{grantDuration}，先定位需要的资料。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_gentle_102",
+      "scene": "accept_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "可以查资料，找到后就回到任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_gentle_103",
+      "scene": "accept_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这段时间按学习用途放行，到点一起确认。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_gentle_104",
+      "scene": "accept_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "先搜具体问题，避免一路点到无关内容。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_snark_101",
+      "scene": "accept_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "行，先信是资料。别最后只留下浏览记录。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_snark_102",
+      "scene": "accept_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "资料找到就用，别一直收藏一直不做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_snark_103",
+      "scene": "accept_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "学习资料这四个字，别用来给刷手机开路。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_snark_104",
+      "scene": "accept_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "给你{grantDuration}。这回拿点能用的东西回去。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_roast_101",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "行，先信你一次。别拿“查资料”给自己打掩护。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_roast_102",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "给你{grantDuration}。找到了就走，别他妈顺手刷个没完。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_roast_103",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "资料要拿回去用。只收藏不动手，装什么努力。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_roast_104",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你自己选的查资料。到点别换个借口继续赖。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_roast_105",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别光让我听你解释。回去把资料用在{task}上。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_study_roast_106",
+      "scene": "accept_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "先放行。别最后学习没学，理由攒了一堆。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_gentle_101",
+      "scene": "accept_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "可以休息{grantDuration}，到点我们再碰一下任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_gentle_102",
+      "scene": "accept_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "先放松一下，提醒出来时再决定下一步。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_gentle_103",
+      "scene": "accept_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "休息不是坏事，我们按你选的时长来。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_gentle_104",
+      "scene": "accept_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这段留给休息，到点就收起手机。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_snark_101",
+      "scene": "accept_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "行，休息。记得这回是休息，不是续订。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_snark_102",
+      "scene": "accept_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "你亲手选的时长，别到点又说太短。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_snark_103",
+      "scene": "accept_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "给你{grantDuration}。提醒可不会装没看见。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_snark_104",
+      "scene": "accept_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "休息可以，别把后面的时间也提前花了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_roast_101",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "行，玩{grantDuration}。到点滚回任务，别又耍赖。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_roast_102",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "可以休息，别他妈把休息玩成失踪。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_roast_103",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "到点就停。这么简单一句话，别又当放屁。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_roast_104",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你要的这段给你了。到点少跟我磨嘴。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_roast_105",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "休息就休息，别一边玩一边装自己在学。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "accept_rest_roast_106",
+      "scene": "accept_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "先玩这一段。别等会儿又拿“就一下”糊弄自己。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_gentle_101",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "查资料的时间到了，先回去尝试解决问题。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_gentle_102",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "如果还缺资料，可以按剩余额度再决定。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_gentle_103",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "先把已有资料用起来，不必一直收集。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_gentle_104",
+      "scene": "followup_study",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "任务是{task}，我们先回去完成一个步骤。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_snark_101",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "时间到了。搜了半天，该把东西用上了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_snark_102",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "资料不能替你动笔，收藏也不是完成。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_snark_103",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "说是查资料，那就带着资料回去做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_snark_104",
+      "scene": "followup_study",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "别一直研究怎么开始，开始本身不收费。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_101",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "查资料的时间到了。还赖着，是资料没完，还是借口没完？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_102",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你说来学习，给你的时间也用了。现在回去动手，别演。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_103",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别他妈把收藏夹当成绩单。资料要用，任务要做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_104",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "“我在查资料”不是免死金牌。到点就是到点。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_105",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "搜来搜去，不做题也不动笔，准备装多久？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_106",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "真有问题就回去试。别把一直找资料当成不开始的理由。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_107",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你都领了{grantCount}次时间了。要用的东西找到了，就别赖。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_study_roast_108",
+      "scene": "followup_study",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "该回到{task}了。再能解释，也抵不了动一下手。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_gentle_101",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "休息到时了，我们先离开应用。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_gentle_102",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "不必一下做完，先回到{task}开始一小步。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_gentle_103",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这段已经用完，下一步由你按约定决定。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_gentle_104",
+      "scene": "followup_rest",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "先把手机收起，看看任务还需要什么。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_snark_101",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "说好到点就停，怎么一到点就开始讨价还价？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_snark_102",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "休息的时间到了，解释的时间倒是刚开始。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_snark_103",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "再一会儿说得很熟练，停下来能不能也练一下？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_snark_104",
+      "scene": "followup_rest",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "约定是你选的，怎么一到执行就不认识了？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_101",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "到点了。你自己定的规矩，自己当屁放？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_102",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别又说就一下。你说的“一下”，到底他妈算不算数？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_103",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "休息已经给你了。到点还赖，别再装委屈。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_104",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你就玩吧。等会儿还得自己补任务，没人替你受着。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_105",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你怕的不是没时间，是终于要开始干正事。先动手。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_106",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别再表演“我知道该学”。知道了还一直赖，知道个屁。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_107",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "按了第{grantCount}次放行，还准备拿同一句话骗自己？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_108",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "再刷一条不会替你完成{task}。关掉它，动手。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_109",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别跟土豆较劲。你耽误的是自己的事，赢了嘴有屁用？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "followup_rest_roast_110",
+      "scene": "followup_rest",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "现在停，比耗光以后骂自己有用。少废话，回去做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_gentle_101",
+      "scene": "repeat_extension",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这是第{grantCount}次放行，后面额度更少了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_gentle_102",
+      "scene": "repeat_extension",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "再次放行按原来的约定计入本轮。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_gentle_103",
+      "scene": "repeat_extension",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这次也会到时提醒，先想好接下来怎么收尾。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_gentle_104",
+      "scene": "repeat_extension",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "延长可以，别忘记你写下的任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_snark_101",
+      "scene": "repeat_extension",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "第{grantCount}次了。每次都说这一段，下一段从哪冒出来的？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_snark_102",
+      "scene": "repeat_extension",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "再给一段。别连“最后”都越用越便宜。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_snark_103",
+      "scene": "repeat_extension",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "你对延长挺果断，对开始任务也这样就好了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_snark_104",
+      "scene": "repeat_extension",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "次数已经记上，别当每次都是第一次。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_roast_101",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "第{grantCount}次了。你那句“再一下”，真是张嘴就来。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_roast_102",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "又续？你给自己找理由的本事，比守约强多了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_roast_103",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "行，记上。别回头又装不知道时间是怎么没的。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_roast_104",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "延长就延长，少给自己编那么好听的理由。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_roast_105",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "这是第{grantCount}次放行。你对自己说的话，还能值几毛钱？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "repeat_extension_roast_106",
+      "scene": "repeat_extension",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "再给你一段。等会儿别他妈又说刚开始。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_gentle_101",
+      "scene": "last_grant",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这是本轮最后一次放行，提前想好怎么收尾。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_gentle_102",
+      "scene": "last_grant",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "最后一段用完后会按约定处理。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_gentle_103",
+      "scene": "last_grant",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这段剩余时间用来完成当前需要，不再另发一段。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_gentle_104",
+      "scene": "last_grant",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "本轮额度接近用完，到时先回任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_snark_101",
+      "scene": "last_grant",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "最后一段。这里的最后没有下一集。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_snark_102",
+      "scene": "last_grant",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "用完就停。别到点才发现自己“不记得”。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_snark_103",
+      "scene": "last_grant",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "最后一次已经标出来了，等会儿别装意外。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_snark_104",
+      "scene": "last_grant",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "这段花完，理由不会给余额充值。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_roast_101",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "最后一次。别到点又装聋，约定写得清清楚楚。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_roast_102",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "这段用完就停。再他妈讨价还价，也没下一段。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_roast_103",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "提前说了，最后一次。等会儿少跟我耍赖。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_roast_104",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别把“最后”当个屁。你亲手选的上限，自己认。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_roast_105",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "想怎么收尾，现在就想。别耗光了才开始磨嘴。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "last_grant_roast_106",
+      "scene": "last_grant",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "最后一段给你。别又让我替你做最简单的决定。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_gentle_101",
+      "scene": "over_limit",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "本轮额度已用完。只提醒模式下，请你自己决定停下来。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_gentle_102",
+      "scene": "over_limit",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "我们已经提醒到时，可以先回任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_gentle_103",
+      "scene": "over_limit",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "当前不会自动退出，你仍可以主动收起应用。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_gentle_104",
+      "scene": "over_limit",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "再提醒一次：先离开应用，碰一下任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_snark_101",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "额度都用完了。只提醒不是说用完可以装没看见。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_snark_102",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "你选了自己停，现在轮到你兑现了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_snark_103",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "提醒还在，任务也还在。怎么选就看你了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_snark_104",
+      "scene": "over_limit",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "已经确认用了{usedMinutes}分钟。接下来还继续吗？",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_101",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "额度用完还点继续？你他妈真能跟自己耍赖。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_102",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "没人替你停，你就装没事？这是你自己选的模式。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_103",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "已经确认用了{usedMinutes}分钟。别回头说时间凭空没了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_104",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "提醒不是摆设。看见了还赖，就别装自己毫不知情。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_105",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你就继续耗。任务不会因为你烦这个提醒就消失。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_106",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "现在还能自己关掉。别等耗完了才骂自己。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_107",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你要的是{goal}。继续玩，是你现在亲手选的。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "over_limit_roast_108",
+      "scene": "over_limit",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别把只提醒当没人管就能糊弄。你自己看得见。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_gentle_101",
+      "scene": "cooldown",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "本轮额度用完，冷却期间先回到任务。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_gentle_102",
+      "scene": "cooldown",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这次按约定返回桌面，下一轮要等冷却结束。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_gentle_103",
+      "scene": "cooldown",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "先收起应用，尝试完成{task}的一小步。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_gentle_104",
+      "scene": "cooldown",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "冷却{cooldownMinutes}，不因再次进入而延长。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_snark_101",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "时间和次数都用完了。这回没法靠解释续上。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_snark_102",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "冷却开始。换入口也不会让它提前结束。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_snark_103",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "你选的规则现在执行了，回桌面。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_snark_104",
+      "scene": "cooldown",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "约定执行到这里，该让任务上场了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_101",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "时间给过，提醒给过，还赖？行，回桌面。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_102",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "非得让个土豆替你按退出。你自己说丢不丢人。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_103",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别他妈再磨了。这轮用完，回去干正事。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_104",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "约定是你选的，现在执行了。少装自己被坑了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_105",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "一次次续，一次次赖。够了，先去碰一下{task}。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_106",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你就跟提醒较劲吧，耗掉的时间可不会还你。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_107",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "刚开始说得挺硬气，现在连到点停都要我替你做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "cooldown_roast_108",
+      "scene": "cooldown",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "这轮用完了。别再拿同一个理由试门。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_gentle_101",
+      "scene": "return_to_task",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "先回到任务，做一个很小的步骤就好。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_gentle_102",
+      "scene": "return_to_task",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "离开应用后，先打开需要用的书或资料。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_gentle_103",
+      "scene": "return_to_task",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "回去之后不用追赶所有进度，先做眼前这一项。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_gentle_104",
+      "scene": "return_to_task",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "把手机放好，回到{task}。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_snark_101",
+      "scene": "return_to_task",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "回去做。别把按“回去学习”当成任务完成。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_snark_102",
+      "scene": "return_to_task",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "先动手，再来谈今天的计划。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_snark_103",
+      "scene": "return_to_task",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "别又换个应用，任务还在那儿等着。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_snark_104",
+      "scene": "return_to_task",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "能把这一个步骤做了，比答应十遍好。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_roast_101",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "回去就动手。别他妈点完按钮就当自己学过了。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_roast_102",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "少说“知道了”。把{task}打开，真的做。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_roast_103",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别拿一个按钮给自己颁奖。回去干活。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_roast_104",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "这次别光嘴上认。手动起来才算。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_roast_105",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "关掉了就去学，别又换个地方刷。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "return_to_task_roast_106",
+      "scene": "return_to_task",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别再演“我醒悟了”。做一点给自己看。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_gentle_101",
+      "scene": "past_self",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "这件事是你自己想做的：{task}。先开始一小步。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_gentle_102",
+      "scene": "past_self",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "你的目标还在：{goal}。可以先回去试一下。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_gentle_103",
+      "scene": "past_self",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "再看看你写下的任务，决定现在的下一步。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_gentle_104",
+      "scene": "past_self",
+      "tone": "gentle",
+      "expression": "suspicious",
+      "text": "不必一下做完，先接上自己的计划。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_snark_101",
+      "scene": "past_self",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "当时写{goal}的人，现在想继续玩的也是你。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_snark_102",
+      "scene": "past_self",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "计划写完不算完成。还差动手这一步。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_snark_103",
+      "scene": "past_self",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "这不是土豆给你派的，是你自己写的。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_snark_104",
+      "scene": "past_self",
+      "tone": "snark",
+      "expression": "suspicious",
+      "text": "别把昨天的决心当今天的完成记录。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_roast_101",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "{task}，你自己写的。别转头就当放了个屁。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_roast_102",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "目标敢写，执行就躲？先做一步，别急着装。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_roast_103",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "别把给自己写的承诺当废纸。现在就开始。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_roast_104",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "你想要{goal}。别让这句话只剩嘴上好听。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_roast_105",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "这事是你自己要做的，别他妈又装跟你没关系。",
+      "origin": "original_v03"
+    },
+    {
+      "id": "past_self_roast_106",
+      "scene": "past_self",
+      "tone": "roast",
+      "expression": "suspicious",
+      "text": "看见自己写的任务了？别光看，回去动手。",
+      "origin": "original_v03"
+    }
+  ]
+}

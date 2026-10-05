@@ -1,0 +1,9 @@
+
+org.potato.supervisor.V03DeviceTest:.
+org.potato.supervisor.AndroidFlowTest:.
+
+Time: 24.283
+
+OK (2 tests)
+
+

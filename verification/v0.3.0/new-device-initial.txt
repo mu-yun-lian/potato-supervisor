@@ -1,0 +1,28 @@
+
+org.potato.supervisor.V03DeviceTest:
+Error in endFeedbackAndCustomLibraryWorkThroughUi(org.potato.supervisor.V03DeviceTest):
+org.junit.ComparisonFailure: expected:<[not_started]> but was:<[partial]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.potato.supervisor.V03DeviceTest.endFeedbackAndCustomLibraryWorkThroughUi(V03DeviceTest.kt:136)
+....
+Error in documentPickerExportsAndImportsWithConflictChoice(org.potato.supervisor.V03DeviceTest):
+java.lang.IllegalStateException: Document save button
+	at org.potato.supervisor.V03DeviceTest.documentPickerExportsAndImportsWithConflictChoice(V03DeviceTest.kt:155)
+
+
+Time: 24.139
+There were 2 failures:
+1) endFeedbackAndCustomLibraryWorkThroughUi(org.potato.supervisor.V03DeviceTest)
+org.junit.ComparisonFailure: expected:<[not_started]> but was:<[partial]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.potato.supervisor.V03DeviceTest.endFeedbackAndCustomLibraryWorkThroughUi(V03DeviceTest.kt:136)
+2) documentPickerExportsAndImportsWithConflictChoice(org.potato.supervisor.V03DeviceTest)
+java.lang.IllegalStateException: Document save button
+	at org.potato.supervisor.V03DeviceTest.documentPickerExportsAndImportsWithConflictChoice(V03DeviceTest.kt:155)
+
+FAILURES!!!
+Tests run: 6,  Failures: 2
+
+

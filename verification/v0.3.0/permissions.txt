@@ -1,0 +1,4 @@
+package: org.potato.supervisor
+uses-permission: name='android.permission.VIBRATE'
+permission: org.potato.supervisor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='org.potato.supervisor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

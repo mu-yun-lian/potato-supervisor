@@ -1,0 +1,6 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><shape><solid android:color="#E4ECCC" /><corners android:radius="20dp" /><size android:width="96dp" android:height="96dp" /></shape></item>
+    <item android:width="76dp" android:height="76dp" android:gravity="center">
+        <bitmap android:src="@drawable/potato_mine_icon" android:gravity="fill" android:filter="true" />
+    </item>
+</layer-list>

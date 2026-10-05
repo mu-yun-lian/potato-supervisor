@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.potato.supervisor.rules.RuleEngineTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-10-05T18:02:13.050Z" hostname="YUN" time="0.104">
+  <properties/>
+  <testcase name="lateTickSeparatesOvershootAndAnchorsCooldown" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.088"/>
+  <testcase name="rebootEndsOldSession" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.001"/>
+  <testcase name="countCanEndBeforeBudget" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="switchingAndReentryRetainSharedBalance" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="thirdGrantIsUsableAndFourthIsRejected" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="internalEventsDoNotCreateNewPrompt" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="unknownRequiresNewEvidenceAndIsRecorded" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="invalidConfigurationIsRejected" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="sessionDeadlineWinsOverExtension" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.001"/>
+  <testcase name="savedBalanceRestoresWithoutNewGrant" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="interruptedSessionStillExpires" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="cooldownEntryDoesNotExtendDeadline" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="explicitReturnForfeitsButDoesNotInventUsage" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="stalePromptFromOldSessionIsRejected" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="remindModeContinuesWithoutFourthGrantOrHome" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="partialTimeIsDisplayedWithoutInventingMinutes" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.006"/>
+  <testcase name="promptReadingDoesNotConsumeAllowance" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="partialLastGrantHonorsBudget" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.001"/>
+  <testcase name="remindModeReentryDoesNotRefreshInterval" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="cooldownResetsOneRoundEvenWithLongGap" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="faultClearsOverlayAndHomeRequests" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.001"/>
+  <testcase name="screenLockPausesUsageButNotSession" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.0"/>
+  <testcase name="duplicateButtonCannotGrantTwice" classname="org.potato.supervisor.rules.RuleEngineTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

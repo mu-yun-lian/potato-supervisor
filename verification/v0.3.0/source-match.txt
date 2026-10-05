@@ -1,0 +1,1 @@
+47 production, unit-test and build-input files match the independently built source copy byte-for-byte. Android UI test waiting/navigation adjustments compiled separately in test-repair-build.log.

@@ -1,0 +1,36 @@
+
+org.potato.supervisor.AndroidFlowTest:..
+Error in notificationAndKeyboardRestoreForeground(org.potato.supervisor.AndroidFlowTest):
+java.lang.AssertionError: Target is recovered after keyboard
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.potato.supervisor.AndroidFlowTest.waitFor(AndroidFlowTest.kt:32)
+	at org.potato.supervisor.AndroidFlowTest.waitFor$default(AndroidFlowTest.kt:29)
+	at org.potato.supervisor.AndroidFlowTest.notificationAndKeyboardRestoreForeground(AndroidFlowTest.kt:101)
+..
+Error in lockAndRotationKeepBalanceAndPrompt(org.potato.supervisor.AndroidFlowTest):
+java.lang.AssertionError: Continue remains reachable by scrolling in landscape
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.potato.supervisor.AndroidFlowTest.lockAndRotationKeepBalanceAndPrompt(AndroidFlowTest.kt:116)
+.....
+
+Time: 568.292
+There were 2 failures:
+1) notificationAndKeyboardRestoreForeground(org.potato.supervisor.AndroidFlowTest)
+java.lang.AssertionError: Target is recovered after keyboard
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.potato.supervisor.AndroidFlowTest.waitFor(AndroidFlowTest.kt:32)
+	at org.potato.supervisor.AndroidFlowTest.waitFor$default(AndroidFlowTest.kt:29)
+	at org.potato.supervisor.AndroidFlowTest.notificationAndKeyboardRestoreForeground(AndroidFlowTest.kt:101)
+2) lockAndRotationKeepBalanceAndPrompt(org.potato.supervisor.AndroidFlowTest)
+java.lang.AssertionError: Continue remains reachable by scrolling in landscape
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.potato.supervisor.AndroidFlowTest.lockAndRotationKeepBalanceAndPrompt(AndroidFlowTest.kt:116)
+
+FAILURES!!!
+Tests run: 11,  Failures: 2
+
+

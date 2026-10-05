@@ -1,0 +1,109 @@
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\res\xml\accessibility_service.xml:8: Warning: Attribute isAccessibilityTool is only used in API level 31 and higher (current min is 26) [UnusedAttribute]
+    android:isAccessibilityTool="false"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\build.gradle.kts:29: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.10.2 is available: 1.11.0 [NewerVersionAvailable]
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\java\org\potato\supervisor\content\Dialogue.kt:34: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putString("custom",JSONArray().apply { custom.forEach {
+        ~~~~~~~~~~~~
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\java\org\potato\supervisor\content\Dialogue.kt:38: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    fun clear() { custom=emptyList(); recent.history.clear(); prefs.edit().clear().apply() }
+                                                              ~~~~~~~~~~~~
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\java\org\potato\supervisor\content\Dialogue.kt:43: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putString("history",JSONArray(recent.history).toString()).apply()
+        ~~~~~~~~~~~~
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\java\org\potato\supervisor\ui\MainActivity.kt:97: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                            OutlinedButton(onClick={ activity.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:${activity.packageName}"))) }) { Text("应用信息／受限设置入口") }
+                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\java\org\potato\supervisor\ui\MainActivity.kt:267: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    val dial=pm.resolveActivity(Intent(Intent.ACTION_DIAL,Uri.parse("tel:")),PackageManager.MATCH_DEFAULT_ONLY)?.activityInfo?.packageName
+                                                          ~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\v03\source-check\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:93: Warning: Use the KTX extension function Canvas.withClip instead? [UseKtx]
+        canvas.save()
+        ~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 8 warnings

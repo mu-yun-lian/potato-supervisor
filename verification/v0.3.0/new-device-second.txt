@@ -1,0 +1,32 @@
+
+org.potato.supervisor.V03DeviceTest:
+Error in endFeedbackAndCustomLibraryWorkThroughUi(org.potato.supervisor.V03DeviceTest):
+java.lang.IllegalStateException: Missing: 设置
+	at org.potato.supervisor.V03DeviceTest.find(V03DeviceTest.kt:45)
+	at org.potato.supervisor.V03DeviceTest.endFeedbackAndCustomLibraryWorkThroughUi(V03DeviceTest.kt:144)
+....
+Error in documentPickerExportsAndImportsWithConflictChoice(org.potato.supervisor.V03DeviceTest):
+androidx.test.uiautomator.StaleObjectException
+	at androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:1018)
+	at androidx.test.uiautomator.UiObject2.scrollUntil(UiObject2.java:800)
+	at org.potato.supervisor.V03DeviceTest.find(V03DeviceTest.kt:44)
+	at org.potato.supervisor.V03DeviceTest.documentPickerExportsAndImportsWithConflictChoice(V03DeviceTest.kt:168)
+
+
+Time: 43.291
+There were 2 failures:
+1) endFeedbackAndCustomLibraryWorkThroughUi(org.potato.supervisor.V03DeviceTest)
+java.lang.IllegalStateException: Missing: 设置
+	at org.potato.supervisor.V03DeviceTest.find(V03DeviceTest.kt:45)
+	at org.potato.supervisor.V03DeviceTest.endFeedbackAndCustomLibraryWorkThroughUi(V03DeviceTest.kt:144)
+2) documentPickerExportsAndImportsWithConflictChoice(org.potato.supervisor.V03DeviceTest)
+androidx.test.uiautomator.StaleObjectException
+	at androidx.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:1018)
+	at androidx.test.uiautomator.UiObject2.scrollUntil(UiObject2.java:800)
+	at org.potato.supervisor.V03DeviceTest.find(V03DeviceTest.kt:44)
+	at org.potato.supervisor.V03DeviceTest.documentPickerExportsAndImportsWithConflictChoice(V03DeviceTest.kt:168)
+
+FAILURES!!!
+Tests run: 6,  Failures: 2
+
+

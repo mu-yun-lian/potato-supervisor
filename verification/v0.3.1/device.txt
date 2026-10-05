@@ -1,0 +1,30 @@
+
+org.potato.supervisor.V03DeviceTest:
+Error in soundPoolAcceptsEachShortCueAndMuteStopsPlayback(org.potato.supervisor.V03DeviceTest):
+java.lang.NoSuchMethodError: No virtual method getAudioAttributes$app_debug()Landroid/media/AudioAttributes; in class Lorg/potato/supervisor/overlay/SoundEffects; or its super classes (declaration of 'org.potato.supervisor.overlay.SoundEffects' appears in /data/app/~~6xhfE5yhaskIn3wfwM-SPQ==/org.potato.supervisor-5zHAC687Vsb3fYdZfyJuAA==/base.apk!classes2.dex)
+	at org.potato.supervisor.V03DeviceTest.soundPoolAcceptsEachShortCueAndMuteStopsPlayback(V03DeviceTest.kt:124)
+
+org.potato.supervisor.MainUiTest:.
+org.potato.supervisor.AndroidFlowTest:
+Error in lockAndRotationKeepBalanceAndPrompt(org.potato.supervisor.AndroidFlowTest):
+org.junit.ComparisonFailure: expected:<...b9ad-5f9582e11ba1:1:[2]> but was:<...b9ad-5f9582e11ba1:1:[3]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.potato.supervisor.AndroidFlowTest.lockAndRotationKeepBalanceAndPrompt(AndroidFlowTest.kt:129)
+.
+
+Time: 111.563
+There were 2 failures:
+1) soundPoolAcceptsEachShortCueAndMuteStopsPlayback(org.potato.supervisor.V03DeviceTest)
+java.lang.NoSuchMethodError: No virtual method getAudioAttributes$app_debug()Landroid/media/AudioAttributes; in class Lorg/potato/supervisor/overlay/SoundEffects; or its super classes (declaration of 'org.potato.supervisor.overlay.SoundEffects' appears in /data/app/~~6xhfE5yhaskIn3wfwM-SPQ==/org.potato.supervisor-5zHAC687Vsb3fYdZfyJuAA==/base.apk!classes2.dex)
+	at org.potato.supervisor.V03DeviceTest.soundPoolAcceptsEachShortCueAndMuteStopsPlayback(V03DeviceTest.kt:124)
+2) lockAndRotationKeepBalanceAndPrompt(org.potato.supervisor.AndroidFlowTest)
+org.junit.ComparisonFailure: expected:<...b9ad-5f9582e11ba1:1:[2]> but was:<...b9ad-5f9582e11ba1:1:[3]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.potato.supervisor.AndroidFlowTest.lockAndRotationKeepBalanceAndPrompt(AndroidFlowTest.kt:129)
+
+FAILURES!!!
+Tests run: 4,  Failures: 2
+
+

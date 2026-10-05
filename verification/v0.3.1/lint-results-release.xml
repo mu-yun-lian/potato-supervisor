@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.13.2">
+
+    <issue
+        id="UnusedAttribute"
+        severity="Warning"
+        message="Attribute `isAccessibilityTool` is only used in API level 31 and higher (current min is 26)"
+        category="Correctness"
+        priority="6"
+        summary="Attribute unused on older versions"
+        explanation="This check finds attributes set in XML files that were introduced in a version newer than the oldest version targeted by your application (with the `minSdkVersion` attribute).&#xA;&#xA;This is not an error; the application will simply ignore the attribute. However, if the attribute is important to the appearance or functionality of your application, you should consider finding an alternative way to achieve the same result with only available attributes, and then you can optionally create a copy of the layout in a layout-vNN folder which will be used on API NN or higher where you can take advantage of the newer attribute.&#xA;&#xA;Note: This check does not only apply to attributes. For example, some tags can be unused too, such as the new `&lt;tag>` element in layouts introduced in API 21."
+        errorLine1="    android:isAccessibilityTool=&quot;false&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\res\xml\accessibility_service.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="        prefs.edit().putString(&quot;custom&quot;,JSONArray().apply { custom.forEach {"
+        errorLine2="        ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\java\org\potato\supervisor\content\Dialogue.kt"
+            line="34"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="    fun clear() { custom=emptyList(); recent.history.clear(); prefs.edit().clear().apply() }"
+        errorLine2="                                                              ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\java\org\potato\supervisor\content\Dialogue.kt"
+            line="38"
+            column="63"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="        prefs.edit().putString(&quot;history&quot;,JSONArray(recent.history).toString()).apply()"
+        errorLine2="        ~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\java\org\potato\supervisor\content\Dialogue.kt"
+            line="43"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `String.toUri` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="                            OutlinedButton(onClick={ activity.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse(&quot;package:${activity.packageName}&quot;))) }) { Text(&quot;应用信息／受限设置入口&quot;) }"
+        errorLine2="                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\java\org\potato\supervisor\ui\MainActivity.kt"
+            line="99"
+            column="129"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `String.toUri` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="    val dial=pm.resolveActivity(Intent(Intent.ACTION_DIAL,Uri.parse(&quot;tel:&quot;)),PackageManager.MATCH_DEFAULT_ONLY)?.activityInfo?.packageName"
+        errorLine2="                                                          ~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\java\org\potato\supervisor\ui\MainActivity.kt"
+            line="270"
+            column="59"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        severity="Warning"
+        message="Use the KTX extension function `Canvas.withClip` instead?"
+        category="Productivity"
+        priority="6"
+        summary="Use KTX extension function"
+        explanation="The Android KTX libraries decorates the Android platform SDK as well as various libraries with more convenient extension functions available from Kotlin, allowing you to use default parameters, named parameters, and more."
+        errorLine1="        canvas.save()"
+        errorLine2="        ~~~~~~~~~~~~~">
+        <location
+            file="C:\Users\14013\Documents\Codex\2026-10-05\files-mentioned-by-the-user-design\outputs\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt"
+            line="93"
+            column="9"/>
+    </issue>
+
+</issues>

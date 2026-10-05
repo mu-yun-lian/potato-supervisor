@@ -1,0 +1,133 @@
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\res\xml\accessibility_service.xml:8: Warning: Attribute isAccessibilityTool is only used in API level 31 and higher (current min is 26) [UnusedAttribute]
+    android:isAccessibilityTool="false"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\build.gradle.kts:29: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.10.2 is available: 1.11.0 [NewerVersionAvailable]
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:19: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        p.color = Color.rgb(223,211,184); c.drawOval(RectF(38f,146f,213f,165f),p)
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:20: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        p.color = Color.rgb(195,150,91); c.drawOval(RectF(35f,32f,210f,155f),p)
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:22: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        c.drawOval(RectF(35f,32f,210f,155f),p); p.style = Paint.Style.FILL
+                   ~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:25: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        p.color = Color.WHITE; c.drawOval(RectF(72f,63f,109f,105f),p); c.drawOval(RectF(133f,63f,170f,105f),p)
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:25: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        p.color = Color.WHITE; c.drawOval(RectF(72f,63f,109f,105f),p); c.drawOval(RectF(133f,63f,170f,105f),p)
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:32: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        c.drawArc(RectF(98f,106f,148f,136f),if(expression=="encourage") 0f else 180f,180f,false,p)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:34: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        p.color = Color.rgb(99,135,86); c.drawOval(RectF(104f,15f,133f,34f),p)
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DrawAllocation":
+   You should avoid allocating objects during a drawing or layout operation.
+   These are called frequently, so a smooth UI can be interrupted by garbage
+   collection pauses caused by the object allocations.
+
+   The way this is generally handled is to allocate the needed objects up
+   front and to reuse them for each drawing operation.
+
+   Some methods allocate memory on your behalf (such as Bitmap.create), and
+   these should be handled in the same way.
+
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\ui\MainActivity.kt:89: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                            OutlinedButton(onClick={ activity.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:${activity.packageName}"))) }) { Text("应用信息／受限设置入口") }
+                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\ui\MainActivity.kt:217: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    val dial=pm.resolveActivity(Intent(Intent.ACTION_DIAL,Uri.parse("tel:")),PackageManager.MATCH_DEFAULT_ONLY)?.activityInfo?.packageName
+                                                          ~~~~~~~~~~~~~~~~~
+<WORKSPACE>\work\fresh-0.1.0\PotatoSupervisor\app\src\main\java\org\potato\supervisor\overlay\PotatoView.kt:18: Warning: Use the KTX extension function Canvas.withTranslation instead? [UseKtx]
+        c.save(); c.translate((width-240*scale)/2, (height-180*scale)/2); c.scale(scale, scale)
+        ~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 12 warnings

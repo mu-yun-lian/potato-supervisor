@@ -1,0 +1,2 @@
+10-05 16:16:24.248  7506  7520 I System.out: TWO_MINUTE_EVIDENCE elapsedMs=120254 confirmedUsageMs=120086 lateMs=86 grantMs=120000
+10-05 16:22:40.111  7506  7520 I System.out: FULL_DURATION_EVIDENCE elapsedMs=300526 confirmedUsageMs=300448 lateMs=448 grantMs=300000

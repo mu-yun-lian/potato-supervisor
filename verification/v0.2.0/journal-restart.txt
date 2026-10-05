@@ -1,0 +1,8 @@
+
+org.potato.supervisor.JournalPersistenceTest:.
+
+Time: 0.073
+
+OK (1 test)
+
+

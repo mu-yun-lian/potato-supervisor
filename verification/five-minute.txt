@@ -1,0 +1,1 @@
+10-05 14:44:04.519  8210  8224 I System.out: FULL_DURATION_EVIDENCE elapsedMs=300376 confirmedUsageMs=300281 lateMs=281 grantMs=300000

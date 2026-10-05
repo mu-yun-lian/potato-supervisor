@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity android:name="org.potato.supervisor.fixture.TargetActivity" android:exported="true" android:label="监督测试入口">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <activity android:name="org.potato.supervisor.fixture.InternalActivity" android:exported="false" />
+    </application>
+</manifest>

@@ -1,0 +1,9 @@
+
+org.potato.supervisor.MainUiTest:...
+org.potato.supervisor.AnimationTest:..
+
+Time: 64.322
+
+OK (5 tests)
+
+

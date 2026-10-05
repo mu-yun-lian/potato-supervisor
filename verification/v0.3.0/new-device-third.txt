@@ -1,0 +1,17 @@
+
+org.potato.supervisor.V03DeviceTest:.....
+Error in documentPickerExportsAndImportsWithConflictChoice(org.potato.supervisor.V03DeviceTest):
+java.lang.IllegalStateException: Document save button
+	at org.potato.supervisor.V03DeviceTest.documentPickerExportsAndImportsWithConflictChoice(V03DeviceTest.kt:169)
+
+
+Time: 48.071
+There was 1 failure:
+1) documentPickerExportsAndImportsWithConflictChoice(org.potato.supervisor.V03DeviceTest)
+java.lang.IllegalStateException: Document save button
+	at org.potato.supervisor.V03DeviceTest.documentPickerExportsAndImportsWithConflictChoice(V03DeviceTest.kt:169)
+
+FAILURES!!!
+Tests run: 6,  Failures: 1
+
+

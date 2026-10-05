@@ -1,0 +1,8 @@
+
+org.potato.supervisor.MainUiTest:.
+
+Time: 26.07
+
+OK (1 test)
+
+

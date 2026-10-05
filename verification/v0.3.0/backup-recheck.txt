@@ -1,0 +1,8 @@
+
+org.potato.supervisor.V03DeviceTest:.
+
+Time: 20.277
+
+OK (1 test)
+
+
