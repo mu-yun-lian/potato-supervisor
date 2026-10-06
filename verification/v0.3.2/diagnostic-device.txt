@@ -1,0 +1,21 @@
+
+org.potato.supervisor.LandscapeGameTest:
+Error in repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(org.potato.supervisor.LandscapeGameTest):
+java.lang.AssertionError: entry 0: windows=[[53, 3, true, true], [52, 1, false, false]] identities={52=org.potato.supervisor.test, 53=com.android.systemui} orientation=2; Snapshot(config=Config(goal=完成今天的学习计划, task=先完成一道题, note=, packages=[org.potato.supervisor.test], sessionMs=3600000, grantMs=4000, maxGrants=1, budgetMs=4000, cooldownMs=20000, mode=LIMIT, tone=snark, vibration=false, reducedMotion=false, sound=false, soundVolume=35), status=ACTIVE, phase=GATE, sessionId=dac8044f-c130-4346-9911-db5d843fd52c, bootId=1, startAt=446473, deadline=4046473, round=1, granted=0, grants=0, totalGrants=0, remaining=0, segmentUsed=0, used=0, forfeited=0, late=0, reason=null, reasons=[], cooldownUntil=0, cooldownCause=, observation=UNKNOWN, targetPackage=, entry=1, sequence=1, prompt=Prompt(id=dac8044f-c130-4346-9911-db5d843fd52c:1:1, scene=entry, lineId=entry_snark_004), shownPrompt=dac8044f-c130-4346-9911-db5d843fd52c:1:1, reminders=1, homeSerial=0, homeHandled=0, homeSuccesses=0, homeFailures=0, gaps=2, unknownMs=8643, endReason=)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.potato.supervisor.LandscapeGameTest.waitFor(LandscapeGameTest.kt:36)
+	at org.potato.supervisor.LandscapeGameTest.repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(LandscapeGameTest.kt:70)
+
+
+Time: 15.055
+There was 1 failure:
+1) repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(org.potato.supervisor.LandscapeGameTest)
+java.lang.AssertionError: entry 0: windows=[[53, 3, true, true], [52, 1, false, false]] identities={52=org.potato.supervisor.test, 53=com.android.systemui} orientation=2; Snapshot(config=Config(goal=完成今天的学习计划, task=先完成一道题, note=, packages=[org.potato.supervisor.test], sessionMs=3600000, grantMs=4000, maxGrants=1, budgetMs=4000, cooldownMs=20000, mode=LIMIT, tone=snark, vibration=false, reducedMotion=false, sound=false, soundVolume=35), status=ACTIVE, phase=GATE, sessionId=dac8044f-c130-4346-9911-db5d843fd52c, bootId=1, startAt=446473, deadline=4046473, round=1, granted=0, grants=0, totalGrants=0, remaining=0, segmentUsed=0, used=0, forfeited=0, late=0, reason=null, reasons=[], cooldownUntil=0, cooldownCause=, observation=UNKNOWN, targetPackage=, entry=1, sequence=1, prompt=Prompt(id=dac8044f-c130-4346-9911-db5d843fd52c:1:1, scene=entry, lineId=entry_snark_004), shownPrompt=dac8044f-c130-4346-9911-db5d843fd52c:1:1, reminders=1, homeSerial=0, homeHandled=0, homeSuccesses=0, homeFailures=0, gaps=2, unknownMs=8643, endReason=)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.potato.supervisor.LandscapeGameTest.waitFor(LandscapeGameTest.kt:36)
+	at org.potato.supervisor.LandscapeGameTest.repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(LandscapeGameTest.kt:70)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

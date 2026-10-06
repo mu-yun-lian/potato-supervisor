@@ -1,6 +1,6 @@
-# 土豆监督员 Android · v0.3.1
+# 土豆监督员 Android · v0.3.3
 
-[下载 v0.3.1 APK](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/v0.3.1) · Android 8.0 及以上 · 无账号、无广告、离线运行
+[下载 GitHub 公开版 v0.3.3 APK](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/v0.3.3) · Android 8.0 及以上 · 无账号、无广告、离线运行
 
 打开你选定的分心应用时，土豆地雷出现提醒。接受搜资料或休息理由后暂时放行，到点追问；次数用完按约定返回桌面。Kotlin 原生、离线运行、无需账号。
 
@@ -34,6 +34,19 @@ v0.1 数据迁移：旧版默认五分钟设置改为两分钟，若其总量仍
 代码 MIT；角色图像与游戏音效权利独立，见 [ASSETS.md](ASSETS.md) 与 [THIRD_PARTY_NOTICES.md](app/src/main/assets/THIRD_PARTY_NOTICES.md)。不宣称官方授权或背书。
 
 构建见 [BUILD.md](BUILD.md)，数据处理见 [PRIVACY.md](PRIVACY.md)，测试范围见 [TEST_REPORT.md](TEST_REPORT.md)，兼容范围见 [COMPATIBILITY.md](COMPATIBILITY.md)。这是 GitHub 公开试用项目，未上架应用商店，未验证成绩或长期学习效果。
+
+## v0.3.3 快速重入修复
+
+- 额度耗尽后的冷却期间持续核对目标应用；快速重开漏掉离开事件时仍会再次返回桌面。
+- 重试不增加额度或延长冷却；连续失败最多 3 次，保留手动退出和结束入口。
+- 同一次提醒只播放一次爆炸，不增加首页诊断显示。实际测试范围见 TEST_REPORT.md。
+
+## v0.3.2 本地识别修复
+
+- 修正窗口事件早于系统窗口列表更新时，新窗口的身份记录被提前删除；保留尚待核对的事件最多 1.5 秒，只使用当前可见窗口，过期及消失的旧窗口不推测为目标应用。
+- 从内容更新事件的窗口编号与应用包名补齐缺失身份；不访问正文、事件文本、节点树或截图，已确认窗口不反复处理此类事件。
+- 仅修补窗口识别，不增加首页诊断提示。
+- v0.3.2 为本地候选修复，已合并到 GitHub v0.3.3；手机与具体游戏结论仍需真机验证。
 
 ## v0.3.1 更新
 

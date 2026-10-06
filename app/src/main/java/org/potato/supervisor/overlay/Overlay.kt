@@ -51,7 +51,7 @@ class Overlay(private val service: MonitorService, private val controller: Super
         setOnClickListener { isEnabled = false; action() }
     }
     suspend fun playLimitEffect(): Long {
-        val key="${controller.screen.value.record.sessionId}:${controller.screen.value.record.homeSerial}"
+        val key="${controller.screen.value.record.sessionId}:${controller.screen.value.record.prompt?.id}"
         if(key==lastBurst) return 0
         lastBurst=key
         repeat(8) {

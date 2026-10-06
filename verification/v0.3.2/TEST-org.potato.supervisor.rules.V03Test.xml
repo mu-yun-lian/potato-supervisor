@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.potato.supervisor.rules.V03Test" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-05T18:57:35.082Z" hostname="YUN" time="0.02">
+  <properties/>
+  <testcase name="phrasePoolCyclesWithoutRepeatsAndSurvivesHistoryReload" classname="org.potato.supervisor.rules.V03Test" time="0.008"/>
+  <testcase name="systemObscurationAndAmbiguousAppsRemainUnknown" classname="org.potato.supervisor.rules.V03Test" time="0.001"/>
+  <testcase name="notStartedDoesNotIncreaseStudyStreak" classname="org.potato.supervisor.rules.V03Test" time="0.006"/>
+  <testcase name="otherScenesDoNotEvictSmallPool" classname="org.potato.supervisor.rules.V03Test" time="0.003"/>
+  <testcase name="livePresentationKeepsRemainingBalanceAndOverlayPause" classname="org.potato.supervisor.rules.V03Test" time="0.001"/>
+  <testcase name="keyboardDoesNotHideConfirmedApp" classname="org.potato.supervisor.rules.V03Test" time="0.0"/>
+  <testcase name="invalidBackupRejectedBeforeMerge" classname="org.potato.supervisor.rules.V03Test" time="0.0"/>
+  <testcase name="backupMergesWithoutLosingUnmentionedDays" classname="org.potato.supervisor.rules.V03Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

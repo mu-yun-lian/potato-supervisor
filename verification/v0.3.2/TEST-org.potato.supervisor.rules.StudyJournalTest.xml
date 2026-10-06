@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.potato.supervisor.rules.StudyJournalTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-05T18:57:35.068Z" hostname="YUN" time="0.01">
+  <properties/>
+  <testcase name="grantDefaultsAndMaximumMatchTheAgreement" classname="org.potato.supervisor.rules.StudyJournalTest" time="0.001"/>
+  <testcase name="optionalMinutesAreNotGuessedAndInvalidEntriesAreRejected" classname="org.potato.supervisor.rules.StudyJournalTest" time="0.001"/>
+  <testcase name="savesOneEntryPerDayAndPreservesOtherDays" classname="org.potato.supervisor.rules.StudyJournalTest" time="0.004"/>
+  <testcase name="gapsAndDuplicateDatesDoNotInflateStreak" classname="org.potato.supervisor.rules.StudyJournalTest" time="0.0"/>
+  <testcase name="streakCrossesYearAndDoesNotRequireTodaysEntry" classname="org.potato.supervisor.rules.StudyJournalTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

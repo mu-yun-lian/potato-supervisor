@@ -88,8 +88,10 @@ class RuleEngine(initial: Snapshot = Snapshot()) {
         private set
     private var accountedAt = initial.startAt
     private var overlayShown = false
+    private var homeAttemptAt: Long? = null
+    private var homeFailureStreak = 0
 
-    fun replace(snapshot: Snapshot, now: Long) { state = snapshot; accountedAt = now; overlayShown = false }
+    fun replace(snapshot: Snapshot, now: Long) { state = snapshot; accountedAt = now; overlayShown = false; homeAttemptAt = null; homeFailureStreak = 0 }
     fun setLine(id: String) { state = state.copy(prompt = state.prompt?.copy(lineId = id)) }
 
     fun updatePresentation(c: Config) {
@@ -104,7 +106,7 @@ class RuleEngine(initial: Snapshot = Snapshot()) {
         require(state.status != SessionStatus.ACTIVE && state.status != SessionStatus.INTERRUPTED) { "请先结束当前时段" }
         state = Snapshot(config = config, status = SessionStatus.ACTIVE, sessionId = UUID.randomUUID().toString(),
             bootId = boot, startAt = now, deadline = now + config.sessionMs)
-        accountedAt = now; overlayShown = false
+        accountedAt = now; overlayShown = false; homeAttemptAt = null; homeFailureStreak = 0
     }
 
     fun advance(now: Long) {
@@ -137,6 +139,11 @@ class RuleEngine(initial: Snapshot = Snapshot()) {
                 cooldownCause = "", prompt = null, homeHandled = state.homeSerial)
             if (state.observation == Observation.TARGET) newPrompt("entry")
         }
+        // A completed HOME request is not proof that the target stayed out of the foreground.
+        // Recheck even when rapid reopening missed the OTHER -> TARGET event pair.
+        if (state.phase == Phase.COOLDOWN && now < state.cooldownUntil && state.observation == Observation.TARGET &&
+            state.homeSerial > 0 && state.homeSerial == state.homeHandled && homeFailureStreak < 3 &&
+            (homeAttemptAt == null || now - homeAttemptAt!! >= 1_000)) requestHome()
     }
 
     fun observe(observation: Observation, target: String, realEntry: Boolean, now: Long) {
@@ -145,6 +152,7 @@ class RuleEngine(initial: Snapshot = Snapshot()) {
         val prior = state.observation
         state = state.copy(observation = observation, targetPackage = if (observation == Observation.TARGET) target else "")
         if (observation == Observation.UNKNOWN && prior != Observation.UNKNOWN) state = state.copy(gaps = state.gaps + 1)
+        if (observation == Observation.OTHER || realEntry) homeFailureStreak = 0
         if (observation != Observation.TARGET) { overlayShown = false; return }
         if (realEntry) state = state.copy(entry = state.entry + 1)
         when {
@@ -229,9 +237,11 @@ class RuleEngine(initial: Snapshot = Snapshot()) {
         if (state.status != SessionStatus.ACTIVE || state.observation != Observation.TARGET || state.homeSerial == state.homeHandled) return null
         val id = state.homeSerial
         state = state.copy(homeHandled = id)
+        homeAttemptAt = now
         return id
     }
     fun homeResult(success: Boolean) {
+        homeFailureStreak = if (success) 0 else homeFailureStreak + 1
         state = if (success) state.copy(homeSuccesses = state.homeSuccesses + 1)
         else state.copy(homeFailures = state.homeFailures + 1)
     }

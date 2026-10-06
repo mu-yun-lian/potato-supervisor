@@ -1,0 +1,36 @@
+
+org.potato.supervisor.LandscapeGameTest:
+Error in repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(org.potato.supervisor.LandscapeGameTest):
+java.lang.AssertionError: entry 0: Snapshot(config=Config(goal=完成今天的学习计划, task=先完成一道题, note=, packages=[org.potato.supervisor.test], sessionMs=3600000, grantMs=4000, maxGrants=1, budgetMs=4000, cooldownMs=20000, mode=LIMIT, tone=snark, vibration=false, reducedMotion=false, sound=false, soundVolume=35), status=ACTIVE, phase=GATE, sessionId=daa5a8f6-8a98-4db0-a015-f7a377e68a3e, bootId=1, startAt=193435, deadline=3793435, round=1, granted=0, grants=0, totalGrants=0, remaining=0, segmentUsed=0, used=0, forfeited=0, late=0, reason=null, reasons=[], cooldownUntil=0, cooldownCause=, observation=UNKNOWN, targetPackage=, entry=1, sequence=1, prompt=Prompt(id=daa5a8f6-8a98-4db0-a015-f7a377e68a3e:1:1, scene=entry, lineId=entry_snark_102), shownPrompt=daa5a8f6-8a98-4db0-a015-f7a377e68a3e:1:1, reminders=1, homeSerial=0, homeHandled=0, homeSuccesses=0, homeFailures=0, gaps=1, unknownMs=10603, endReason=)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.potato.supervisor.LandscapeGameTest.waitFor(LandscapeGameTest.kt:28)
+	at org.potato.supervisor.LandscapeGameTest.repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(LandscapeGameTest.kt:61)
+
+Error in immersiveSurfaceGetsEntryReminderAndAutomaticHome(org.potato.supervisor.LandscapeGameTest):
+java.lang.AssertionError: rest reachable in landscape
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at org.potato.supervisor.LandscapeGameTest.immersiveSurfaceGetsEntryReminderAndAutomaticHome(LandscapeGameTest.kt:53)
+
+
+Time: 30.3
+There were 2 failures:
+1) repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(org.potato.supervisor.LandscapeGameTest)
+java.lang.AssertionError: entry 0: Snapshot(config=Config(goal=完成今天的学习计划, task=先完成一道题, note=, packages=[org.potato.supervisor.test], sessionMs=3600000, grantMs=4000, maxGrants=1, budgetMs=4000, cooldownMs=20000, mode=LIMIT, tone=snark, vibration=false, reducedMotion=false, sound=false, soundVolume=35), status=ACTIVE, phase=GATE, sessionId=daa5a8f6-8a98-4db0-a015-f7a377e68a3e, bootId=1, startAt=193435, deadline=3793435, round=1, granted=0, grants=0, totalGrants=0, remaining=0, segmentUsed=0, used=0, forfeited=0, late=0, reason=null, reasons=[], cooldownUntil=0, cooldownCause=, observation=UNKNOWN, targetPackage=, entry=1, sequence=1, prompt=Prompt(id=daa5a8f6-8a98-4db0-a015-f7a377e68a3e:1:1, scene=entry, lineId=entry_snark_102), shownPrompt=daa5a8f6-8a98-4db0-a015-f7a377e68a3e:1:1, reminders=1, homeSerial=0, homeHandled=0, homeSuccesses=0, homeFailures=0, gaps=1, unknownMs=10603, endReason=)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.potato.supervisor.LandscapeGameTest.waitFor(LandscapeGameTest.kt:28)
+	at org.potato.supervisor.LandscapeGameTest.repeatedLandscapeEntriesAlwaysRemindWithoutNewAllowance(LandscapeGameTest.kt:61)
+2) immersiveSurfaceGetsEntryReminderAndAutomaticHome(org.potato.supervisor.LandscapeGameTest)
+java.lang.AssertionError: rest reachable in landscape
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at org.potato.supervisor.LandscapeGameTest.immersiveSurfaceGetsEntryReminderAndAutomaticHome(LandscapeGameTest.kt:53)
+
+FAILURES!!!
+Tests run: 2,  Failures: 2
+
+

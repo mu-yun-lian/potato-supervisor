@@ -9,7 +9,6 @@ import android.content.IntentFilter
 import android.os.Build
 import android.provider.Settings
 import android.view.accessibility.AccessibilityEvent
-import android.view.accessibility.AccessibilityWindowInfo
 import kotlinx.coroutines.*
 import org.potato.supervisor.SupervisorApp
 import org.potato.supervisor.overlay.Overlay
@@ -26,7 +25,7 @@ class MonitorService : AccessibilityService() {
     private var wasOther=true
     private var locked=false
     private var registered=false
-    private val windowPackages=mutableMapOf<Int,String>()
+    private val windowPackages=WindowPackages()
     private val receiver=object: BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if(intent?.action==Intent.ACTION_SCREEN_OFF) {
@@ -73,15 +72,22 @@ class MonitorService : AccessibilityService() {
             while(isActive) {
                 val isLocked=getSystemService(KeyguardManager::class.java).isKeyguardLocked || !getSystemService(android.os.PowerManager::class.java).isInteractive
                 if(isLocked && !locked) { locked=true; wasOther=true; lastTarget=""; controller.observe(Observation.LOCKED) }
-                if(!isLocked && controller.screen.value.record.status==SessionStatus.ACTIVE && controller.screen.value.record.observation==Observation.UNKNOWN) reconcileWindows()
+                val record=controller.screen.value.record
+                if(!isLocked && record.status==SessionStatus.ACTIVE &&
+                    (record.observation==Observation.UNKNOWN || record.phase==Phase.COOLDOWN)) reconcileWindows()
                 controller.tick(); delay(if(isLocked) 5_000 else 500)
             }
         }
     }
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
-        if(event==null || event.eventType !in setOf(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED,AccessibilityEvent.TYPE_WINDOWS_CHANGED)) return
-        if(event.eventType==AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED && event.windowId>=0) {
-            event.packageName?.toString()?.let { windowPackages[event.windowId]=it }
+        if(event==null || event.eventType !in setOf(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED,AccessibilityEvent.TYPE_WINDOWS_CHANGED,AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED)) return
+        if(event.eventType==AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED && windowPackages.hasIdentity(event.windowId)) return
+        if(event.eventType!=AccessibilityEvent.TYPE_WINDOWS_CHANGED) {
+            val changed=event.packageName?.toString()?.let {
+                windowPackages.record(event.windowId,it,controller.now(),renew=event.eventType==AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED)
+            } ?: false
+            // Content events repair missing identities, without repeatedly processing game frames.
+            if(event.eventType==AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED && !changed) return
         }
         reconcileWindows()
     }
@@ -93,9 +99,9 @@ class MonitorService : AccessibilityService() {
         val unlocked=locked; locked=false
         // Only window metadata. Never call getRoot(), event.source, text, title or screenshot APIs.
         val visible=runCatching { windows }.getOrDefault(emptyList())
-        windowPackages.keys.retainAll(visible.map { it.id }.toSet())
+        val packages=windowPackages.visible(visible.map { it.id }.toSet(),controller.now())
         val pkg = ForegroundWindows.packageName(visible.map {
-            WindowMetadata(it.type, windowPackages[it.id], it.isFocused, it.isActive)
+            WindowMetadata(it.type, packages[it.id], it.isFocused, it.isActive)
         })
         if(pkg==null) { scope.launch { controller.observe(Observation.UNKNOWN) }; return }
         if(pkg in s.config.packages) {

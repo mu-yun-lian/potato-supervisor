@@ -1,0 +1,25 @@
+
+org.potato.supervisor.LandscapeGameTest:...
+org.potato.supervisor.AndroidFlowTest:...
+org.potato.supervisor.MainUiTest:
+Error in configureConsentStartEndAndLicensesOffline(org.potato.supervisor.MainUiTest):
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at org.potato.supervisor.MainUiTest.configureConsentStartEndAndLicensesOffline(MainUiTest.kt:126)
+
+
+Time: 116.477
+There was 1 failure:
+1) configureConsentStartEndAndLicensesOffline(org.potato.supervisor.MainUiTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at org.potato.supervisor.MainUiTest.configureConsentStartEndAndLicensesOffline(MainUiTest.kt:126)
+
+FAILURES!!!
+Tests run: 7,  Failures: 1
+
+

@@ -155,7 +155,7 @@ fun SupervisorScreen(activity: Activity, controller: SupervisorController) {
                 }
                 if(ui.error.isNotBlank()) Text(ui.error,color=MaterialTheme.colorScheme.error)
                 if(localMessage.isNotBlank()) Text(localMessage)
-                GardenLabel("本机保存 · 无需联网 · v0.3.1")
+                GardenLabel("本机保存 · 无需联网 · v0.3.3")
             }
             finishTask?.let { task -> FinishReview(task,controller.journal,{finishTask=null}) { finishTask=null; page="journal" } }
             if(consentDialog) AlertDialog(onDismissRequest={consentDialog=false},title={Text("无障碍权限用途")},

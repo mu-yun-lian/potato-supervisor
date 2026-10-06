@@ -1,0 +1,8 @@
+
+org.potato.supervisor.LandscapeGameTest:..
+
+Time: 34.243
+
+OK (2 tests)
+
+

@@ -1,0 +1,9 @@
+
+org.potato.supervisor.LandscapeGameTest:...
+org.potato.supervisor.AndroidFlowTest:...
+
+Time: 97.555
+
+OK (6 tests)
+
+

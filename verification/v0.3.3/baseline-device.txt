@@ -1,0 +1,21 @@
+
+org.potato.supervisor.LandscapeGameTest:
+Error in exhaustedLandscapeRapidReopeningStillReturnsHome(org.potato.supervisor.LandscapeGameTest):
+java.lang.AssertionError: cooldown rapid reopen 0: windows=[[14, 4, false, false], [11, 1, true, true]] identities={11=org.potato.supervisor.test, 1=com.google.android.apps.nexuslauncher, 14=org.potato.supervisor} orientation=2; Snapshot(config=Config(goal=完成今天的学习计划, task=先完成一道题, note=, packages=[org.potato.supervisor.test], sessionMs=3600000, grantMs=4000, maxGrants=1, budgetMs=4000, cooldownMs=120000, mode=LIMIT, tone=snark, vibration=false, reducedMotion=false, sound=false, soundVolume=35), status=ACTIVE, phase=COOLDOWN, sessionId=537e2114-bffd-48b4-8557-1839b3df6cff, bootId=1, startAt=184921, deadline=3784921, round=1, granted=4000, grants=1, totalGrants=1, remaining=0, segmentUsed=4000, used=4484, forfeited=0, late=484, reason=REST, reasons=[REST], cooldownUntil=340902, cooldownCause=放行次数用完，本轮额度用完, observation=TARGET, targetPackage=org.potato.supervisor.test, entry=1, sequence=2, prompt=Prompt(id=537e2114-bffd-48b4-8557-1839b3df6cff:1:2, scene=cooldown, lineId=cooldown_snark_102), shownPrompt=537e2114-bffd-48b4-8557-1839b3df6cff:1:2, reminders=2, homeSerial=1, homeHandled=1, homeSuccesses=1, homeFailures=0, gaps=2, unknownMs=2783, endReason=)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.potato.supervisor.LandscapeGameTest.waitFor(LandscapeGameTest.kt:36)
+	at org.potato.supervisor.LandscapeGameTest.exhaustedLandscapeRapidReopeningStillReturnsHome(LandscapeGameTest.kt:90)
+
+
+Time: 60.512
+There was 1 failure:
+1) exhaustedLandscapeRapidReopeningStillReturnsHome(org.potato.supervisor.LandscapeGameTest)
+java.lang.AssertionError: cooldown rapid reopen 0: windows=[[14, 4, false, false], [11, 1, true, true]] identities={11=org.potato.supervisor.test, 1=com.google.android.apps.nexuslauncher, 14=org.potato.supervisor} orientation=2; Snapshot(config=Config(goal=完成今天的学习计划, task=先完成一道题, note=, packages=[org.potato.supervisor.test], sessionMs=3600000, grantMs=4000, maxGrants=1, budgetMs=4000, cooldownMs=120000, mode=LIMIT, tone=snark, vibration=false, reducedMotion=false, sound=false, soundVolume=35), status=ACTIVE, phase=COOLDOWN, sessionId=537e2114-bffd-48b4-8557-1839b3df6cff, bootId=1, startAt=184921, deadline=3784921, round=1, granted=4000, grants=1, totalGrants=1, remaining=0, segmentUsed=4000, used=4484, forfeited=0, late=484, reason=REST, reasons=[REST], cooldownUntil=340902, cooldownCause=放行次数用完，本轮额度用完, observation=TARGET, targetPackage=org.potato.supervisor.test, entry=1, sequence=2, prompt=Prompt(id=537e2114-bffd-48b4-8557-1839b3df6cff:1:2, scene=cooldown, lineId=cooldown_snark_102), shownPrompt=537e2114-bffd-48b4-8557-1839b3df6cff:1:2, reminders=2, homeSerial=1, homeHandled=1, homeSuccesses=1, homeFailures=0, gaps=2, unknownMs=2783, endReason=)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.potato.supervisor.LandscapeGameTest.waitFor(LandscapeGameTest.kt:36)
+	at org.potato.supervisor.LandscapeGameTest.exhaustedLandscapeRapidReopeningStillReturnsHome(LandscapeGameTest.kt:90)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

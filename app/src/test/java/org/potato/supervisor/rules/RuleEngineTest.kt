@@ -99,6 +99,44 @@ class RuleEngineTest {
         e.observe(Observation.OTHER, "", false, 5_000); e.advance(90_000)
         assertEquals(2, e.state.round); assertEquals(0, e.state.grants); assertEquals(Phase.GATE, e.state.phase)
     }
+    @Test fun cooldownRechecksTargetWhenRapidReentryMissesLeaveEvent() {
+        val e = fresh(cfg.copy(maxGrants = 1)); click(e, Choice.REST, 0); consume(e, 5_000)
+        val until = e.state.cooldownUntil
+        assertNotNull(e.takeHome(5_000)); e.homeResult(true)
+        // HOME was accepted, but no OTHER event arrived before the game reopened.
+        e.observe(Observation.TARGET, "target.a", false, 5_100)
+        assertNull(e.takeHome(5_999))
+        assertNotNull("Known target still needs enforcement", e.takeHome(6_000))
+        assertNull(e.takeHome(6_000))
+        assertEquals(until, e.state.cooldownUntil); assertEquals(1, e.state.grants)
+        assertEquals(0L, e.state.remaining); assertEquals(Phase.COOLDOWN, e.state.phase)
+    }
+    @Test fun failedCooldownHomeRetriesWithoutGrantingMoreTime() {
+        val e = fresh(cfg.copy(maxGrants = 1)); click(e, Choice.REST, 0); consume(e, 5_000)
+        assertNotNull(e.takeHome(5_000)); e.homeResult(false)
+        assertNull(e.takeHome(5_999)); assertNotNull(e.takeHome(6_000))
+        assertEquals(1, e.state.homeFailures); assertEquals(0L, e.state.remaining)
+    }
+    @Test fun cooldownRetryNeverActsOnUnknownOtherLockedOrEnded() {
+        for (o in listOf(Observation.UNKNOWN, Observation.OTHER, Observation.LOCKED)) {
+            val e = fresh(cfg.copy(maxGrants = 1)); click(e, Choice.REST, 0); consume(e, 5_000)
+            e.takeHome(5_000); e.homeResult(true)
+            e.observe(o, "", false, 5_100); e.advance(6_000)
+            assertEquals(e.state.homeSerial, e.state.homeHandled); assertNull(e.takeHome(6_000))
+        }
+        val e = fresh(cfg.copy(maxGrants = 1)); click(e, Choice.REST, 0); consume(e, 5_000)
+        e.takeHome(5_000); e.end("结束"); assertNull(e.takeHome(6_000))
+    }
+    @Test fun repeatedHomeFailuresStopUntilAnotherConfirmedEntry() {
+        val e = fresh(cfg.copy(maxGrants = 1)); click(e, Choice.REST, 0); consume(e, 5_000)
+        repeat(3) { i -> assertNotNull(e.takeHome(5_000+i*1_000L)); e.homeResult(false) }
+        e.observe(Observation.TARGET, "target.a", false, 8_000)
+        assertNull(e.takeHome(8_000)); assertNull(e.takeHome(9_000))
+        assertEquals(3, e.state.homeFailures); assertEquals(0L, e.state.remaining)
+        e.observe(Observation.OTHER, "", false, 9_100)
+        e.observe(Observation.TARGET, "target.a", true, 9_200)
+        assertNotNull(e.takeHome(9_200)); assertEquals(25_000L, e.state.cooldownUntil)
+    }
     @Test fun remindModeContinuesWithoutFourthGrantOrHome() {
         val e = fresh(cfg.copy(mode = Mode.REMIND, maxGrants = 1))
         click(e, Choice.REST, 0); consume(e, 5_000)
