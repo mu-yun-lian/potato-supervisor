@@ -1,0 +1,74 @@
+name: iOS build and rules
+on:
+  push:
+    branches: [codex/ios-validation]
+    paths: ['ios/**', '.github/workflows/ios-validation.yml']
+  pull_request:
+    paths: ['ios/**', '.github/workflows/ios-validation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ios-validation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: macos-26
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode and record environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ios-ci-results
+          for candidate in /Applications/Xcode_26.5.app /Applications/Xcode_26.6.app; do
+            if [[ -d "$candidate" ]]; then
+              sudo xcode-select --switch "$candidate/Contents/Developer"
+              break
+            fi
+          done
+          xcodebuild -version | tee ios-ci-results/environment.txt
+          xcrun --sdk iphonesimulator --show-sdk-version | tee -a ios-ci-results/environment.txt
+          sw_vers | tee -a ios-ci-results/environment.txt
+          xcrun simctl list devices available --json > ios-ci-results/simulators.json
+          xcodebuild -list -project ios/PotatoSupervisor.xcodeproj > ios-ci-results/project.txt
+      - name: Build main app and all extensions for simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -project ios/PotatoSupervisor.xcodeproj -scheme PotatoSupervisor \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/potato-derived" \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee ios-ci-results/build.log
+      - name: Run policy XCTest on available iPhone simulator
+        shell: bash
+        run: |
+          set -euo pipefail
+          simulator=$(python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('ios-ci-results/simulators.json').read_text())
+          candidates=[device for runtime,devices in sorted(data['devices'].items(),reverse=True)
+                      if '.iOS-' in runtime for device in devices
+                      if device.get('isAvailable') and device['name'].startswith('iPhone')]
+          if not candidates: raise SystemExit('No available iPhone simulator runtime')
+          print(candidates[0]['udid'])
+          PY
+          )
+          echo "$simulator" > ios-ci-results/test-device.txt
+          xcrun simctl boot "$simulator" || true
+          xcrun simctl bootstatus "$simulator" -b
+          xcodebuild -project ios/PotatoSupervisor.xcodeproj -scheme PotatoSupervisor \
+            -destination "platform=iOS Simulator,id=$simulator" \
+            -derivedDataPath "$RUNNER_TEMP/potato-derived" \
+            -resultBundlePath ios-ci-results/PolicyTests.xcresult \
+            -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test \
+            2>&1 | tee ios-ci-results/tests.log
+      - name: Upload build and test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-validation-${{ github.run_id }}
+          path: ios-ci-results/
+          retention-days: 14
