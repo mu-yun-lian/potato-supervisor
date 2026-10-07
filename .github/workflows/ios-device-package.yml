@@ -1,0 +1,87 @@
+name: iOS device package (unsigned)
+on:
+  push:
+    branches: [codex/ios-validation]
+    paths: ['.github/workflows/ios-device-package.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode and record environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ios-device-results
+          for candidate in /Applications/Xcode_26.5.app /Applications/Xcode_26.6.app; do
+            if [[ -d "$candidate" ]]; then
+              sudo xcode-select --switch "$candidate/Contents/Developer"
+              break
+            fi
+          done
+          xcodebuild -version | tee ios-device-results/environment.txt
+          xcrun --sdk iphoneos --show-sdk-version | tee -a ios-device-results/environment.txt
+      - name: Compile Release for physical iPhone (no developer signing)
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -project ios/PotatoSupervisor.xcodeproj -scheme PotatoSupervisor \
+            -configuration Release -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/potato-device-derived" \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build \
+            2>&1 | tee ios-device-results/build.log
+      - name: Package device app with explicit unsigned status
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import os,plistlib,json,subprocess,shutil,hashlib,zipfile
+          app=Path(os.environ['RUNNER_TEMP'])/'potato-device-derived/Build/Products/Release-iphoneos/PotatoSupervisor.app'
+          out=Path('ios-device-results')
+          info=plistlib.loads((app/'Info.plist').read_bytes())
+          assert info['CFBundleSupportedPlatforms']==['iPhoneOS'],info
+          assert info['MinimumOSVersion']=='17.4',info
+          extensions=sorted((app/'PlugIns').glob('*.appex'))
+          assert len(extensions)==3
+          components=[]
+          for bundle in [app]+extensions:
+              metadata=plistlib.loads((bundle/'Info.plist').read_bytes())
+              assert metadata['CFBundleSupportedPlatforms']==['iPhoneOS']
+              assert not (bundle/'embedded.mobileprovision').exists()
+              executable=bundle/metadata['CFBundleExecutable']
+              arch=subprocess.check_output(['lipo','-archs',str(executable)],text=True).strip()
+              assert arch=='arm64',arch
+              # Remove any linker-generated ad-hoc signature: this artifact is explicitly unsigned.
+              subprocess.run(['codesign','--remove-signature',str(executable)],capture_output=True)
+              signature=subprocess.run(['codesign','-dv',str(executable)],capture_output=True,text=True)
+              assert signature.returncode!=0,'Unexpected remaining signature'
+              components.append({'name':bundle.name,'bundle_id':metadata['CFBundleIdentifier'],'architecture':arch,'developer_signed':False,'platform':'iPhoneOS'})
+          payload=out/'Payload'
+          payload.mkdir(exist_ok=True)
+          shutil.copytree(app,payload/app.name)
+          ipa=out/'PotatoSupervisor-iOS-0.1.0-UNSIGNED.ipa'
+          with zipfile.ZipFile(ipa,'w',zipfile.ZIP_DEFLATED) as archive:
+              for file in sorted(payload.rglob('*')):
+                  if file.is_file(): archive.write(file,file.relative_to(out).as_posix())
+          with zipfile.ZipFile(ipa) as archive:
+              assert archive.testzip() is None
+          digest=hashlib.sha256(ipa.read_bytes()).hexdigest()
+          (out/'SHA256SUMS.txt').write_text(digest+'  '+ipa.name+'\n')
+          (out/'README-UNSIGNED.txt').write_text('这是 iPhone 设备版的未签名 IPA，不是可直接安装的测试版。\n没有 Apple 开发者签名、设备描述文件或 Family Controls 分发授权。普通 iPhone 不能直接安装并使用本包。\nBundle ID 和 App Group 仍是源码占位符，正式构建需替换并配置真实团队权限；主应用与三个扩展分别签名。\n本包来自 Release / iphoneos / arm64 编译，包含三个扩展，不是模拟器应用或源码 ZIP。\n不包含证书、私钥、账号或任何授权保证。没有真机安装或拦截验证。\n',encoding='utf-8')
+          report={'artifact':ipa.name,'sha256':digest,'platform':'iPhoneOS','architecture':'arm64','configuration':'Release','minimum_ios':'17.4','developer_signed':False,'installable_on_stock_iphone':False,'placeholder_identifiers':True,'physical_device_tested':False,'source_commit':os.environ['GITHUB_SHA'],'components':components}
+          (out/'PACKAGE_REPORT.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          shutil.rmtree(payload)
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          PY
+      - name: Upload unsigned IPA and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-device-unsigned-${{ github.run_id }}
+          path: ios-device-results/
+          retention-days: 14
