@@ -1,6 +1,6 @@
 # Mac 上的首次编译与签名
 
-本文件是后续执行说明。下列 Xcode 命令**没有在当前 Windows 环境执行过**。
+本文件是本机复现与签名说明。2026-10-07 已使用 GitHub macOS 构建机、Xcode 26.5 完成模拟器编译与 12 个 XCTest，详情见 `docs/TEST_REPORT.md`；没有在本地 Windows 执行 Xcode，也没有真机验证。
 
 ## 1. 准备环境
 
@@ -30,7 +30,7 @@ xcodebuild -project PotatoSupervisor.xcodeproj -scheme PotatoSupervisor \
   -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
 ```
 
-源码静态检查不能发现全部 Apple SDK 类型、隔离标注或扩展 API 限制；首次真实编译若报错，保留完整报错与 SDK 版本，按实际证据修复。
+当前版本已完成 Apple SDK 模拟器编译。更换 SDK、签名或构建配置后若报错，应保留完整报错与版本，按实际证据修复。
 
 模拟器规则测试先查看本机可用目的设备，再替换设备名称：
 
@@ -41,7 +41,7 @@ xcodebuild -project PotatoSupervisor.xcodeproj -scheme PotatoSupervisor \
   CODE_SIGNING_ALLOWED=NO test
 ```
 
-`PolicyTests` 只验证本地规则，不证明系统授权、使用统计或扩展回调在模拟器/真机可用。测试主机应用和扩展的模拟器能力仍受具体系统环境限制。
+测试目标包含 9 个本地规则测试与 3 个包内资源测试，不证明系统授权、使用统计或扩展回调在模拟器/真机可用。测试主机应用和扩展的模拟器能力仍受具体系统环境限制。
 
 ## 4. 真机最小验证
 

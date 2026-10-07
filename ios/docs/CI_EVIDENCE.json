@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-07",
+  "run_id": 37561418277,
+  "run_url": "https://github.com/mu-yun-lian/potato-supervisor/actions/runs/37561418277",
+  "job_url": "https://github.com/mu-yun-lian/potato-supervisor/actions/runs/37561418277/job/112599310218",
+  "tested_commit": "71107a93e8286a03e6f68395ffbe39d4c9600731",
+  "runner": "macos-26",
+  "environment": "Xcode 26.5\nBuild version 17F42\n26.5\nProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+  "simulator": {
+    "name": "iPhone 17 Pro",
+    "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-26-5",
+    "udid": "22452A91-4697-4369-8812-53ADB77EB73B"
+  },
+  "build": "passed; main app and three extensions; iOS Simulator; code signing disabled",
+  "tests": {
+    "executed": 12,
+    "passed": 12,
+    "failed": 0,
+    "policy": 9,
+    "resources": 3,
+    "cases": [
+      "PolicyTests.PolicyTests testClockChangeAndRebootInterruptInsteadOfInventingTime",
+      "PolicyTests.PolicyTests testCodableRoundTripKeepsBalanceAndSegmentIdentity",
+      "PolicyTests.PolicyTests testColdExpiryMakesOneNewRoundWithoutUnshielding",
+      "PolicyTests.PolicyTests testFailedReservationDoesNotChargeAndDuplicateCommitRejected",
+      "PolicyTests.PolicyTests testFinalPartialGrantHonorsSharedBudget",
+      "PolicyTests.PolicyTests testSessionEndWinsAndOldCallbackCannotReapply",
+      "PolicyTests.PolicyTests testStaleThresholdDoesNotFinishNewSegment",
+      "PolicyTests.PolicyTests testThreeGrantsThenCooldownAndRapidReopenStaysShielded",
+      "PolicyTests.PolicyTests testWallWindowExpiryDoesNotInventConfirmedUsage",
+      "PolicyTests.ResourceTests testAudioFilesAreDecodableByApplePlayer",
+      "PolicyTests.ResourceTests testDialogueBankLoadsInHostAndShieldExtension",
+      "PolicyTests.ResourceTests testSpritesDecodeInHostAndShieldExtension"
+    ]
+  },
+  "image_loading_warning_after_fix": false,
+  "unverified": [
+    "physical iPhone",
+    "Family Controls authorization and entitlement signing",
+    "App Group access across real signed processes",
+    "Device Activity usage thresholds and delays",
+    "actual game shielding and rapid reopening",
+    "visual appearance and audible playback",
+    "TestFlight and App Store"
+  ],
+  "source_sha256": {
+    "App/PotatoSupervisorApp.swift": "cb0a6a86e7b405aa9de7910387f4220282a630020f84a0ef403066f898e076f4",
+    "App/StudyContentView.swift": "e1bba59eb3254174899d25358ff307703de8c7500b81a59bb6aec83aeb72bf6c",
+    "App/StudyDiary.swift": "10d591e005b0b6b36e45e69490e4ba045f6f81943912fd77d26966fd7e093e4c",
+    "App/StudyModel.swift": "02cc1c9802f935de9425ed3b0ef2db9207a60c19ba09309df6872a95f86b932a",
+    "Extensions/Monitor/StudyMonitor.swift": "44ce56d6f676144e209984b4cd527b4c1818d30f6d5a0ff85df862f6062a0cd7",
+    "Extensions/ShieldAction/StudyShieldAction.swift": "fbeb4cf3eb5192a43f124ba8ecaa1382aa96efeed2cf0892c88b9dd27372fb21",
+    "Extensions/ShieldConfiguration/StudyShieldConfiguration.swift": "4e3b1eda5df291cefce8bcf8005c06f7a23ac7b47996e639743fe7945adde1dc",
+    "Shared/CharacterImage.swift": "41e33f08b79e6d0241e6ef16e76d08e0f8a1edd1c15ce3fc58a7f63481da9695",
+    "Shared/Dialogue.swift": "7a5ba20d867af54a4c05a8f79295002f5820df2d28659a93427b1cf0d8bd9419",
+    "Shared/Policy.swift": "defd4c3c2235664098b9edcfd325ab61a8be40ab1ab009232131a6725f3931c4",
+    "Shared/ScreenTimeCoordinator.swift": "5ef7a3f26670675a4ca093d04245dfb53bd8a9edfcfc0fef9b35b114f25d63f0",
+    "Shared/SharedStorage.swift": "f4352040f94ec454f3c03a8b2816112e470ca52fb5c3f26d1c8a04318723d526",
+    "Tests/PolicyTests.swift": "f97c17cbaca9c19c7df081c11c96dd9c7c9d9a4a3ce5be6ecb8ed4a54b46d4b4",
+    "Tests/ResourceTests.swift": "f0ff185a29dffd28347b57e3dd5be53c2f77f40c916296f9d489079a6594b8aa"
+  },
+  "evidence_sha256": {
+    "environment.txt": "d35251c89fcbdb57232e0003ff31b223eea1e954e35fdecb55956820db581a44",
+    "build.log": "de3bd64f6b81788fc24fbbc7454a57aebe17eba098e8841ef9aced8a614e2e3b",
+    "tests.log": "15192491ffafd9cd2f2f7130c5a9d523f464b038177859c00a336ec5bc50fe7d"
+  }
+}

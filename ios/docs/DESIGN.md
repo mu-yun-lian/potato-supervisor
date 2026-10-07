@@ -10,7 +10,7 @@
 
 **事实边界**：Apple 提供的系统 shield 可定制静态图、标题、说明和按钮，不能因此推导出可以插入任意跨应用动画、播放游戏爆炸声或持续监听每次前台切换。较新系统已新增 shield 按钮打开主应用的正式能力，不能继续用旧结论“一律无法打开主应用”。
 
-**本次交付边界**：源码已写入，工程已生成；在 Windows 只做文件、语法和工程结构检查。未调用 Apple 编译器，未执行 XCTest，未验证系统能力，没有可安装包。方案可落实程度仍以之后的 iPhone 验收为准。
+**本次交付边界**：源码已完成云端 Xcode 26.5 编译；iPhone 模拟器中 12 个 XCTest 通过（9 规则 + 3 资源）。修复了首轮日志发现的土豆图片读取失败。Windows 静态检查另列，尚未真机验证系统能力，没有可安装包。具体证据见 `TEST_REPORT.md` 和 `CI_EVIDENCE.json`。
 
 ## 二、功能对照
 
@@ -75,7 +75,7 @@ Apple 的 15 分钟下限针对 `DeviceActivitySchedule` 区间，不是说使�
 | StudyMonitorExtension | Device Activity 阈值与区间结束回调；更新规则和 shield |
 | StudyShieldConfigurationExtension | 从共享数据只读生成静态角色与语录；不在渲染时修改监督 |
 | StudyShieldActionExtension | 系统按钮响应；新系统打开主应用，旧系统可选通知 |
-| PolicyTests | 纯规则 XCTest 源码，独立于屏幕使用时间 SDK 行为 |
+| PolicyTests | 9 个规则 + 3 个运行时包资源 XCTest，不证明屏幕使用时间服务可用 |
 
 四个应用/扩展目标声明同一个 App Group 和 Family Controls；测试目标没有这两项权限。共享 Swift 文件包含规则、协调、持久化和语录，不引入包依赖。Info.plist 已填对应扩展入口、模块类名及共享组占位符；工程含扩展嵌入、目标依赖与共享方案。
 
@@ -97,19 +97,19 @@ individual 是自用授权，用户可以撤销授权、结束会话或删除应
 
 ## 七、已检查与待验证
 
-当前完成：12 个 Swift 文件语法树解析；5 目标工程 OpenStep 解析及文件/依赖引用核对；plist、entitlements、隐私清单和共享方案解析；257 条语料 ID 唯一性；4 图与安卓资源字节一致；4 音效原始哈希和转码 WAV 结构/时长核对。
+当前完成：14 个 Swift 文件语法树解析；5 目标工程、plist/entitlements/隐私清单/共享方案核对；语料、图像、声音静态检查；云端 Xcode 26.5 编译主应用和三个扩展；iPhone 模拟器执行 12 个 XCTest，全部通过。
 
-当前未完成：Apple SDK 类型检查、Xcode 构建、9 个 XCTest 执行、模拟器运行、iPhone 屏幕使用时间授权、扩展回调、横屏行为、真机音效和 TestFlight。静态 Swift 解析通过只说明语法结构可解析，不能证明 API 调用或签名正确。
+当前未完成：真实团队签名与 App Group 权限、iPhone 屏幕使用时间授权、扩展实际回调、横屏游戏拦截、真机音效和 TestFlight。无签名模拟器出现 FamilyControlsAgent 连接失败及 App Group 无权限，说明本次测试未验证这些核心服务，不能用 XCTest 成功掩盖该边界。
 
 最先执行 `DEVICE_ACCEPTANCE.md` 中的核心能力先验；重点验证短额度延迟、多个应用用量共享、窗口到期和额度耗尽后快速重开。核心先验失败时先修复平台流程，追加统计图或美术不能解决后台监督失效。
 
 ## 八、发布与成本
 
-当前交付完整可审阅源码，不提供安装包。拿到 Mac 或 macOS 构建服务后才能进行 Apple 工具链编译，真机验证还需要 iPhone。TestFlight / App Store 需要 Apple Developer Program（官方页面当前列明 99 美元/年或当地货币），家庭控制分发权限需要账号持有人申请，主应用与三个扩展分别申请。
+当前交付完整可审阅源码，不提供安装包。本次已借助 macOS 云端环境完成编译和模拟器规则/资源测试，真实拦截验证仍需要 iPhone 与正确签名。TestFlight / App Store 需要 Apple Developer Program（官方页面当前列明 99 美元/年或当地货币），家庭控制分发权限需要账号持有人申请，主应用与三个扩展分别申请。
 
 会员加入不等于 Family Controls 权限通过，GitHub 公开也不等于 App Store 审核通过。还需补商店图标、截图、隐私资料、分级、审核说明、素材分发条件。代码 MIT 不涵盖现有第三方游戏角色与声音；这项分发问题需要在正式上架前落实，不影响此次准备源码。
 
-建议顺序：源码与设计交付 → macOS 首次编译修正 → iPhone 核心能力验收 → TestFlight → 再评估正式上架与非核心功能。当前不因没有开发条件而要求先购买全套硬件或承诺上架时间。
+建议顺序：源码与设计交付 → macOS 编译及规则/资源测试（已完成） → iPhone 核心能力验收 → TestFlight → 再评估正式上架与非核心功能。当前不因没有开发条件而要求先购买全套硬件或承诺上架时间。
 
 ## 九、Apple 官方依据
 
