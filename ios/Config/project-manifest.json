@@ -1,0 +1,105 @@
+{
+  "targets": {
+    "PotatoSupervisor": {
+      "kind": "app",
+      "sources": [
+        "Shared/Dialogue.swift",
+        "Shared/Policy.swift",
+        "Shared/ScreenTimeCoordinator.swift",
+        "Shared/SharedStorage.swift",
+        "App/PotatoSupervisorApp.swift",
+        "App/StudyContentView.swift",
+        "App/StudyDiary.swift",
+        "App/StudyModel.swift"
+      ],
+      "resources": [
+        "Resources/PrivacyInfo.xcprivacy",
+        "Resources/THIRD_PARTY_NOTICES.txt",
+        "Resources/appear.wav",
+        "Resources/dialogue.json",
+        "Resources/disappear.wav",
+        "Resources/explosion.wav",
+        "Resources/potato-mine-angry.png",
+        "Resources/potato-mine-blink.png",
+        "Resources/potato-mine-explosion.png",
+        "Resources/potato-mine.png",
+        "Resources/warning.wav"
+      ],
+      "suffix": "",
+      "product": "PotatoSupervisor.app"
+    },
+    "StudyMonitorExtension": {
+      "kind": "extension",
+      "sources": [
+        "Shared/Dialogue.swift",
+        "Shared/Policy.swift",
+        "Shared/ScreenTimeCoordinator.swift",
+        "Shared/SharedStorage.swift",
+        "Extensions/Monitor/StudyMonitor.swift"
+      ],
+      "resources": [
+        "Config/PrivacyInfo.xcprivacy"
+      ],
+      "suffix": ".Monitor",
+      "product": "StudyMonitorExtension.appex",
+      "principal": "StudyMonitor",
+      "point": "com.apple.deviceactivity.monitor-extension"
+    },
+    "StudyShieldConfigurationExtension": {
+      "kind": "extension",
+      "sources": [
+        "Shared/Dialogue.swift",
+        "Shared/Policy.swift",
+        "Shared/ScreenTimeCoordinator.swift",
+        "Shared/SharedStorage.swift",
+        "Extensions/ShieldConfiguration/StudyShieldConfiguration.swift"
+      ],
+      "resources": [
+        "Resources/potato-mine.png",
+        "Resources/potato-mine-angry.png",
+        "Resources/dialogue.json",
+        "Resources/THIRD_PARTY_NOTICES.txt",
+        "Config/PrivacyInfo.xcprivacy"
+      ],
+      "suffix": ".ShieldConfiguration",
+      "product": "StudyShieldConfigurationExtension.appex",
+      "principal": "StudyShieldConfiguration",
+      "point": "com.apple.ManagedSettingsUI.shield-configuration-service"
+    },
+    "StudyShieldActionExtension": {
+      "kind": "extension",
+      "sources": [
+        "Shared/Dialogue.swift",
+        "Shared/Policy.swift",
+        "Shared/ScreenTimeCoordinator.swift",
+        "Shared/SharedStorage.swift",
+        "Extensions/ShieldAction/StudyShieldAction.swift"
+      ],
+      "resources": [
+        "Config/PrivacyInfo.xcprivacy"
+      ],
+      "suffix": ".ShieldAction",
+      "product": "StudyShieldActionExtension.appex",
+      "principal": "StudyShieldAction",
+      "point": "com.apple.ManagedSettings.shield-action-service"
+    },
+    "PolicyTests": {
+      "kind": "test",
+      "sources": [
+        "Shared/Policy.swift",
+        "Tests/PolicyTests.swift"
+      ],
+      "resources": [],
+      "suffix": ".PolicyTests",
+      "product": "PolicyTests.xctest"
+    }
+  },
+  "objects": 141,
+  "targetIDs": {
+    "PotatoSupervisor": "E4FC4B16E08AC1342003BDD4",
+    "StudyMonitorExtension": "7F488C762D599FA9D10F351A",
+    "StudyShieldConfigurationExtension": "E0C4428879CC4DFC2643365B",
+    "StudyShieldActionExtension": "51236D69BBC0DFE92C49357E",
+    "PolicyTests": "378C7D3D794FD3F42E84652D"
+  }
+}

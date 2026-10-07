@@ -1,0 +1,58 @@
+[
+  {
+    "resource": "appear.ogg",
+    "upstream_path": "sounds/plant.ogg",
+    "commit": "8ba94e95cfe7d0de5682f8258d3b932dbdac885c",
+    "git_blob": "fbf07144a4a44957b711d6304bc96b27a1f6abe6",
+    "sha256": "1a2067fb16914b6bded36be4c014b3f1e097aaddf2a48803d3cd68319316e5f9",
+    "bytes": 12675,
+    "seconds": 0.755,
+    "source": "https://github.com/FregD156/PvZ_Assets/blob/8ba94e95cfe7d0de5682f8258d3b932dbdac885c/sounds/plant.ogg",
+    "ios_resource": "Resources/appear.wav",
+    "ios_sha256": "fd13967a1de586ee73d3a37d83ed256c27646b8dfd39469faffecf110fb14704",
+    "ios_seconds": 0.7546485260770975,
+    "conversion": "ffmpeg PCM signed 16-bit WAV; no trimming; retained input sample rate/channels"
+  },
+  {
+    "resource": "disappear.ogg",
+    "upstream_path": "sounds/shovel.ogg",
+    "commit": "8ba94e95cfe7d0de5682f8258d3b932dbdac885c",
+    "git_blob": "98b2ccb6ec2ec92d01125056f6e495e096c4cd87",
+    "sha256": "c96ea143c9839e4ca228e5772120db45603b04edb88c6891370cf96a2ed9cd85",
+    "bytes": 7036,
+    "seconds": 0.231,
+    "source": "https://github.com/FregD156/PvZ_Assets/blob/8ba94e95cfe7d0de5682f8258d3b932dbdac885c/sounds/shovel.ogg",
+    "ios_resource": "Resources/disappear.wav",
+    "ios_sha256": "d86b62db9ddf6bd91dd7736919689449f70df2af6459d2699485d8e5e6b18d1e",
+    "ios_seconds": 0.22852607709750566,
+    "conversion": "ffmpeg PCM signed 16-bit WAV; no trimming; retained input sample rate/channels"
+  },
+  {
+    "resource": "warning.ogg",
+    "upstream_path": "sounds/tap.ogg",
+    "commit": "8ba94e95cfe7d0de5682f8258d3b932dbdac885c",
+    "git_blob": "e5394aeb811ac95bd194da1f98667cc917e735e7",
+    "sha256": "cd7f291e88f81145d6e4f11eedf9bc6b329809e384e515f56927ae2e9ebee1c6",
+    "bytes": 12949,
+    "seconds": 0.479,
+    "source": "https://github.com/FregD156/PvZ_Assets/blob/8ba94e95cfe7d0de5682f8258d3b932dbdac885c/sounds/tap.ogg",
+    "ios_resource": "Resources/warning.wav",
+    "ios_sha256": "7feed20bcbd9e2c194f59ed522c23fd9dca928a8a327179f59ed77d2f5c9f2aa",
+    "ios_seconds": 0.47891156462585033,
+    "conversion": "ffmpeg PCM signed 16-bit WAV; no trimming; retained input sample rate/channels"
+  },
+  {
+    "resource": "explosion.ogg",
+    "upstream_path": "sounds/potato_mine.ogg",
+    "commit": "8ba94e95cfe7d0de5682f8258d3b932dbdac885c",
+    "git_blob": "ffe0bf681db6e1e8c3c0647d7d030983bc67af8f",
+    "sha256": "e25852420ba0e38e42b7a14e55de718dafbed38c2390a2cc525bcc99efb4a781",
+    "bytes": 35463,
+    "seconds": 1.846,
+    "source": "https://github.com/FregD156/PvZ_Assets/blob/8ba94e95cfe7d0de5682f8258d3b932dbdac885c/sounds/potato_mine.ogg",
+    "ios_resource": "Resources/explosion.wav",
+    "ios_sha256": "3640d6eea48aa0dc2e23554606c3fdff31ab3fb79073f46c2241add1cf3f9914",
+    "ios_seconds": 1.8463038548752835,
+    "conversion": "ffmpeg PCM signed 16-bit WAV; no trimming; retained input sample rate/channels"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "scope": "syntax and file/project structure only; no Apple SDK typechecking, build, XCTest execution or device tests",
+  "swift_files": 12,
+  "swift_syntax_errors": 0,
+  "xcode_targets": 5,
+  "pbx_objects": 141,
+  "dialogue_lines": 257,
+  "audio_files": 4,
+  "images": 4,
+  "source_tests_written": 9,
+  "apple_tests_executed": 0,
+  "parser_versions": {
+    "tree_sitter": "0.26.0",
+    "tree_sitter_swift": "0.7.4",
+    "openstep_parser": "2.0.3"
+  }
+}

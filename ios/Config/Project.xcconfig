@@ -1,0 +1,10 @@
+// Replace these identifiers with App IDs/App Group registered to your Apple team.
+APP_BUNDLE_IDENTIFIER = org.example.potatosupervisor
+APP_GROUP_IDENTIFIER = group.org.example.potatosupervisor
+DEVELOPMENT_TEAM =
+IPHONEOS_DEPLOYMENT_TARGET = 17.4
+SWIFT_VERSION = 5.0
+SWIFT_STRICT_CONCURRENCY = targeted
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
+CODE_SIGN_STYLE = Automatic
