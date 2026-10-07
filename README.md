@@ -1,4 +1,25 @@
-# 土豆监督员 Android · v0.3.3
+# 土豆监督员
+
+离线学习监督工具，提供 Android 应用与独立的原生 iOS 源码原型，无需本项目账号、服务器或大模型。
+
+| 平台 | 当前状态 | 入口 |
+|---|---|---|
+| Android | v0.3.3 公开试用 APK，Android 8.0+ | [下载 APK](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/v0.3.3) |
+| iOS | 0.1.0 源码原型，编译与 12 个模拟器测试通过；尚未真机验证，没有安装用 IPA | [源码与说明](ios/README.md) |
+
+## iOS · 0.1.0 源码原型
+
+使用 SwiftUI 与 Apple 屏幕使用时间框架，包含学习设置、选定应用限制、短暂使用额度、冷却、257 条语录、每日学习记录和应用内动画/音效。最低运行版本 iOS 17.4；编译需包含 iOS 26.5 或更新 SDK 的 Xcode。
+
+2026-10-07 已在 GitHub macOS 环境用 Xcode 26.5 编译主应用及三个扩展，并在 iOS 26.5 的 iPhone 17 Pro 模拟器中执行 12 个 XCTest，全部通过。首轮发现的土豆图片读取失败已修复并复测。见 [测试报告](ios/docs/TEST_REPORT.md) 与 [云端执行记录](https://github.com/mu-yun-lian/potato-supervisor/actions/runs/37561418277)。
+
+**尚未验证真实 iPhone 授权、系统拦截与后台回调。** 当前无签名模拟器不能正常使用 Family Controls 服务与 App Group 权限，规则测试成功不等于真实游戏拦截已通过。没有 IPA、TestFlight 或 App Store 版本。
+
+与安卓版的区别：iOS 系统拦截页使用静态图文；批准一段短暂使用后，放行期间重开应用不会每次提醒，系统报告用量达到门槛后恢复限制。动画、爆炸和声音在主应用内展示。完整规则与平台边界见 [适配方案](ios/docs/DESIGN.md)。
+
+下载本仓库源码后，打开 `ios/PotatoSupervisor.xcodeproj`。编译、签名与 App Group 配置见 [iOS 构建说明](ios/BUILD.md)。正式分发前还需正确的苹果开发者签名、Family Controls 权限与真机验收。
+
+## Android · v0.3.3
 
 [下载 GitHub 公开版 v0.3.3 APK](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/v0.3.3) · Android 8.0 及以上 · 无账号、无广告、离线运行
 
