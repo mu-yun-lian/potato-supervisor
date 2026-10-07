@@ -3,6 +3,7 @@
     "PotatoSupervisor": {
       "kind": "app",
       "sources": [
+        "Shared/CharacterImage.swift",
         "Shared/Dialogue.swift",
         "Shared/Policy.swift",
         "Shared/ScreenTimeCoordinator.swift",
@@ -31,6 +32,7 @@
     "StudyMonitorExtension": {
       "kind": "extension",
       "sources": [
+        "Shared/CharacterImage.swift",
         "Shared/Dialogue.swift",
         "Shared/Policy.swift",
         "Shared/ScreenTimeCoordinator.swift",
@@ -48,6 +50,7 @@
     "StudyShieldConfigurationExtension": {
       "kind": "extension",
       "sources": [
+        "Shared/CharacterImage.swift",
         "Shared/Dialogue.swift",
         "Shared/Policy.swift",
         "Shared/ScreenTimeCoordinator.swift",
@@ -69,6 +72,7 @@
     "StudyShieldActionExtension": {
       "kind": "extension",
       "sources": [
+        "Shared/CharacterImage.swift",
         "Shared/Dialogue.swift",
         "Shared/Policy.swift",
         "Shared/ScreenTimeCoordinator.swift",
@@ -87,14 +91,15 @@
       "kind": "test",
       "sources": [
         "Shared/Policy.swift",
-        "Tests/PolicyTests.swift"
+        "Tests/PolicyTests.swift",
+        "Tests/ResourceTests.swift"
       ],
       "resources": [],
       "suffix": ".PolicyTests",
       "product": "PolicyTests.xctest"
     }
   },
-  "objects": 141,
+  "objects": 148,
   "targetIDs": {
     "PotatoSupervisor": "E4FC4B16E08AC1342003BDD4",
     "StudyMonitorExtension": "7F488C762D599FA9D10F351A",

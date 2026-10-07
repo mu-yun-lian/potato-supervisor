@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import FamilyControls
 
 struct StudyContentView: View {
@@ -43,7 +44,7 @@ struct StudyContentView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    Image(model.bursting ? "potato-mine-explosion" : model.session?.phase == .cooldown ? "potato-mine-angry" : "potato-mine")
+                    Image(uiImage: CharacterImage.load(model.bursting ? "potato-mine-explosion" : model.session?.phase == .cooldown ? "potato-mine-angry" : "potato-mine") ?? UIImage())
                         .resizable().scaledToFit().frame(height: 170)
                         .scaleEffect(breathing && !reduceMotion ? 1.035 : 1)
                         .animation(reduceMotion || scenePhase != .active ? nil : .easeInOut(duration: 1.5).repeatForever(autoreverses: true), value: breathing)

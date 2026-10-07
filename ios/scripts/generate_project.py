@@ -40,7 +40,7 @@ TARGETS = {
     'StudyMonitorExtension': dict(kind='extension', sources=COMMON+['Extensions/Monitor/StudyMonitor.swift'], resources=['Config/PrivacyInfo.xcprivacy'], suffix='.Monitor', product='StudyMonitorExtension.appex', principal='StudyMonitor', point='com.apple.deviceactivity.monitor-extension'),
     'StudyShieldConfigurationExtension': dict(kind='extension', sources=COMMON+['Extensions/ShieldConfiguration/StudyShieldConfiguration.swift'], resources=['Resources/potato-mine.png','Resources/potato-mine-angry.png','Resources/dialogue.json','Resources/THIRD_PARTY_NOTICES.txt','Config/PrivacyInfo.xcprivacy'], suffix='.ShieldConfiguration', product='StudyShieldConfigurationExtension.appex', principal='StudyShieldConfiguration', point='com.apple.ManagedSettingsUI.shield-configuration-service'),
     'StudyShieldActionExtension': dict(kind='extension', sources=COMMON+['Extensions/ShieldAction/StudyShieldAction.swift'], resources=['Config/PrivacyInfo.xcprivacy'], suffix='.ShieldAction', product='StudyShieldActionExtension.appex', principal='StudyShieldAction', point='com.apple.ManagedSettings.shield-action-service'),
-    'PolicyTests': dict(kind='test', sources=['Shared/Policy.swift','Tests/PolicyTests.swift'], resources=[], suffix='.PolicyTests', product='PolicyTests.xctest'),
+    'PolicyTests': dict(kind='test', sources=['Shared/Policy.swift']+sorted(str(p.relative_to(ROOT)).replace('\\', '/') for p in (ROOT/'Tests').glob('*.swift')), resources=[], suffix='.PolicyTests', product='PolicyTests.xctest'),
 }
 privacy = dict(NSPrivacyTracking=False, NSPrivacyCollectedDataTypes=[], NSPrivacyAccessedAPITypes=[
     dict(NSPrivacyAccessedAPIType='NSPrivacyAccessedAPICategorySystemBootTime', NSPrivacyAccessedAPITypeReasons=['35F9.1'])])
