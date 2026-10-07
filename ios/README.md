@@ -1,6 +1,6 @@
 # 土豆监督员 · iOS 源码原型 0.1.0
 
-**状态：主应用与三个扩展已通过云端 Xcode 编译，iPhone 模拟器执行 12 个 XCTest 全部通过；尚未真机授权与拦截验证。没有 IPA，不是可安装或可上架版本。**
+**状态：主应用与三个扩展已通过云端 Xcode 编译，iPhone 模拟器执行 12 个 XCTest 全部通过；尚未真机授权与拦截验证。已生成未签名 iPhone 设备版 IPA，普通 iPhone 不能直接安装，不是可上架版本。**
 
 这是一版独立的原生 iPhone 应用，使用 SwiftUI 和 Apple 屏幕使用时间框架。保留本地学习约定、土豆语录、短暂使用额度、冷却和每天学习记录，不需要本项目账号、服务器或大模型。
 
@@ -52,6 +52,6 @@
 
 ## 分发条件
 
-当前可交付的是源码。TestFlight / App Store 需要 Apple Developer Program、四个目标的签名和 Family Controls 分发权限审核，另需真机验收、商店图标和资料。GitHub 源码公开不等于能直接安装 iOS 应用。具体成本及申请依据见 [适配设计](docs/DESIGN.md)。
+当前提供源码与 [未签名设备版 IPA](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/ios-v0.1.0-unsigned)。IPA 是 Release / iphoneos / arm64 构建，不能直接在普通 iPhone 安装；打包证据和限制见 [设备版说明](docs/DEVICE_PACKAGE.md)。TestFlight / App Store 需要 Apple Developer Program、四个目标的签名和 Family Controls 分发权限审核，另需真机验收、商店图标和资料。GitHub 源码公开不等于能直接安装 iOS 应用。具体成本及申请依据见 [适配设计](docs/DESIGN.md)。
 
 [隐私](PRIVACY.md) · [素材边界](ASSETS.md) · [实际检查报告](docs/TEST_REPORT.md)

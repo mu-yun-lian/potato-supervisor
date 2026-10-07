@@ -1,0 +1,43 @@
+{
+  "artifact": "PotatoSupervisor-iOS-0.1.0-UNSIGNED.ipa",
+  "sha256": "bc56d4b132ae7a8ef8d4f158412c514fb8b5bc76458e3247ee6b91395b19ed67",
+  "platform": "iPhoneOS",
+  "architecture": "arm64",
+  "configuration": "Release",
+  "minimum_ios": "17.4",
+  "developer_signed": false,
+  "installable_on_stock_iphone": false,
+  "placeholder_identifiers": true,
+  "physical_device_tested": false,
+  "source_commit": "175b3c6a5f310a5396300da40fee1af5f41756f2",
+  "components": [
+    {
+      "name": "PotatoSupervisor.app",
+      "bundle_id": "org.example.potatosupervisor",
+      "architecture": "arm64",
+      "developer_signed": false,
+      "platform": "iPhoneOS"
+    },
+    {
+      "name": "StudyMonitorExtension.appex",
+      "bundle_id": "org.example.potatosupervisor.Monitor",
+      "architecture": "arm64",
+      "developer_signed": false,
+      "platform": "iPhoneOS"
+    },
+    {
+      "name": "StudyShieldActionExtension.appex",
+      "bundle_id": "org.example.potatosupervisor.ShieldAction",
+      "architecture": "arm64",
+      "developer_signed": false,
+      "platform": "iPhoneOS"
+    },
+    {
+      "name": "StudyShieldConfigurationExtension.appex",
+      "bundle_id": "org.example.potatosupervisor.ShieldConfiguration",
+      "architecture": "arm64",
+      "developer_signed": false,
+      "platform": "iPhoneOS"
+    }
+  ]
+}

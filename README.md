@@ -5,7 +5,7 @@
 | 平台 | 当前状态 | 入口 |
 |---|---|---|
 | Android | v0.3.3 公开试用 APK，Android 8.0+ | [下载 APK](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/v0.3.3) |
-| iOS | 0.1.0 源码原型，编译与 12 个模拟器测试通过；尚未真机验证，没有安装用 IPA | [源码与说明](ios/README.md) |
+| iOS | 0.1.0 原型，未签名设备版 IPA；不能直接安装，尚未真机验证 | [下载与说明](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/ios-v0.1.0-unsigned) · [源码](ios/README.md) |
 
 ## iOS · 0.1.0 源码原型
 
@@ -13,7 +13,7 @@
 
 2026-10-07 已在 GitHub macOS 环境用 Xcode 26.5 编译主应用及三个扩展，并在 iOS 26.5 的 iPhone 17 Pro 模拟器中执行 12 个 XCTest，全部通过。首轮发现的土豆图片读取失败已修复并复测。见 [测试报告](ios/docs/TEST_REPORT.md) 与 [云端执行记录](https://github.com/mu-yun-lian/potato-supervisor/actions/runs/37561418277)。
 
-**尚未验证真实 iPhone 授权、系统拦截与后台回调。** 当前无签名模拟器不能正常使用 Family Controls 服务与 App Group 权限，规则测试成功不等于真实游戏拦截已通过。没有 IPA、TestFlight 或 App Store 版本。
+**尚未验证真实 iPhone 授权、系统拦截与后台回调。** 当前无签名模拟器不能正常使用 Family Controls 服务与 App Group 权限，规则测试成功不等于真实游戏拦截已通过。已提供 [未签名 iPhone 设备版 IPA](https://github.com/mu-yun-lian/potato-supervisor/releases/tag/ios-v0.1.0-unsigned)，普通 iPhone 不能直接安装；没有 TestFlight 或 App Store 版本。设备版打包记录见 [说明](ios/docs/DEVICE_PACKAGE.md)。
 
 与安卓版的区别：iOS 系统拦截页使用静态图文；批准一段短暂使用后，放行期间重开应用不会每次提醒，系统报告用量达到门槛后恢复限制。动画、爆炸和声音在主应用内展示。完整规则与平台边界见 [适配方案](ios/docs/DESIGN.md)。
 
